@@ -5,27 +5,134 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb2221c5-68fa-4da4-bfff-927835c7b6ed" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/zen.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/PacketDataStructure.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Protocol/AckPacket.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Protocol/AuthPacket.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Protocol/AuthProtocol/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Protocol/CloseSessionPacket.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Protocol/DataPacket.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Protocol/PlumberPacket.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Protocol/StartSessionPacket.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ProxyServer/IncomingData.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ProxyServer/Server.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ProxyServer/Test.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ProxyServer/Test2.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Modules/ProxyServer/OutgoingData.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Modules/ProxyServer/OutgoingPlumberData.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Modules/ProxyServer/Server.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Modules/ProxyServer/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/certifi/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/certifi/cacert.pem" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/certifi/core.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/big5freq.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/big5prober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/chardistribution.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/charsetgroupprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/charsetprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/cli/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/cli/chardetect.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/codingstatemachine.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/cp949prober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/enums.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/escprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/escsm.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/eucjpprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/euckrfreq.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/euckrprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/euctwfreq.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/euctwprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/gb2312freq.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/gb2312prober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/hebrewprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/jisfreq.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/jpcntx.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/langbulgarianmodel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/langgreekmodel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/langhebrewmodel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/langhungarianmodel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/langthaimodel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/langturkishmodel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/latin1prober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/mbcharsetprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/mbcsgroupprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/mbcssm.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/sbcharsetprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/sbcsgroupprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/sjisprober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/universaldetector.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/utf8prober.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/chardet/version.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/colorama/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/colorama/ansi.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/colorama/ansitowin32.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/colorama/initialise.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/colorama/win32.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/colorama/winterm.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/_backport/misc.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/_backport/shutil.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/_backport/sysconfig.cfg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/_backport/tarfile.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/compat.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/database.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/index.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/locators.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/manifest.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/metadata.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/resources.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/scripts.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/t32.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/t64.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/util.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/version.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/w32.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/w64.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/distlib/wheel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/html5lib/_tokenizer.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/_collections.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/connection.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/connectionpool.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/contrib/_securetransport/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/contrib/_securetransport/bindings.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/contrib/_securetransport/low_level.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/contrib/appengine.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/contrib/ntlmpool.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/contrib/securetransport.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/exceptions.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/fields.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/filepost.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/packages/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/packages/backports/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/packages/backports/makefile.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/packages/ordered_dict.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/packages/six.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/packages/ssl_match_hostname/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/packages/ssl_match_hostname/_implementation.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/poolmanager.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/request.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/response.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/util/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/util/connection.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/util/request.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/util/response.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/util/retry.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/util/selectors.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/util/ssl_.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/util/url.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/util/wait.py" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/plumber.iml" afterPath="$PROJECT_DIR$/.idea/plumber.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Client/PlumberProtocol.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Protocol/PlumberProtocol.py" afterPath="$PROJECT_DIR$/Client/Client.py" />
-      <change beforePath="$PROJECT_DIR$/Protocol/__init__.py" afterPath="$PROJECT_DIR$/Protocol/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/Client/Client.py" afterPath="$PROJECT_DIR$/Modules/Client/Client.py" />
+      <change beforePath="$PROJECT_DIR$/Client/__init__.py" afterPath="$PROJECT_DIR$/venv/lib/python2.7/site-packages/pip/_vendor/urllib3/contrib/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/Protocol/AckPacket.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Protocol/AuthPacket.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Protocol/AuthProtocol/__init__.py" afterPath="$PROJECT_DIR$/Modules/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/Protocol/CloseSessionPacket.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Protocol/DataPacket.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Protocol/PlumberPacket.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Protocol/StartSessionPacket.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Protocol/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ProxyServer/IncomingData.py" afterPath="$PROJECT_DIR$/Modules/ProxyServer/IncomingPlumber.py" />
+      <change beforePath="$PROJECT_DIR$/ProxyServer/Server.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ProxyServer/Test.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ProxyServer/Test2.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ProxyServer/__init__.py" afterPath="$PROJECT_DIR$/Modules/Client/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,82 +140,70 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/plumber$Server.coverage" NAME="Server Coverage Results" MODIFIED="1522091040302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ProxyServer" />
+    <SUITE FILE_PATH="coverage/plumber$Test2.coverage" NAME="Test2 Coverage Results" MODIFIED="1522066002115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ProxyServer" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StartSessionPacket.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Protocol/StartSessionPacket.py">
+      <file leaf-file-name="Server.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Modules/ProxyServer/Server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="126">
+              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProxyServer/Server.py">
+      <file leaf-file-name="OutgoingData.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Modules/ProxyServer/OutgoingData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="72">
+              <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test2.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ProxyServer/Test2.py">
+      <file leaf-file-name="OutgoingPlumberData.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Modules/ProxyServer/OutgoingPlumberData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1332">
-              <caret line="101" column="46" lean-forward="false" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IncomingData.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProxyServer/IncomingData.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="41">
+              <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="DataPacket.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Protocol/DataPacket.py">
+        <entry file="file://$PROJECT_DIR$/Modules/DataPacket.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="50" />
+            <state relative-caret-position="54">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Protocol/__init__.py">
+        <entry file="file://$PROJECT_DIR$/Modules/ProxyServer/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="54">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="3" selection-end-column="0" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlumberPacket.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Modules/PlumberPacket.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="11" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,7 +223,16 @@
       <find>short</find>
       <find>TCP</find>
       <find>q1</find>
+      <find>from ..DataPacket import DataPacket</find>
+      <find>from Modules import PlumberPacket</find>
+      <find>from ..PlumberPacket import PlumberPacket</find>
     </findStrings>
+    <replaceStrings>
+      <replace>from Modules import PlumberPacket</replace>
+      <replace>from Modules.DataPacket import DataPacket</replace>
+      <replace>from Modules.PlumberPacket import PlumberPacket</replace>
+      <replace>from ..DataPacket import DataPacket</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -142,25 +246,42 @@
         <option value="$PROJECT_DIR$/Protocol/PlumberProto.py" />
         <option value="$PROJECT_DIR$/Protocol/AckPacket.py" />
         <option value="$PROJECT_DIR$/Protocol/CloseSessionPacket.py" />
-        <option value="$PROJECT_DIR$/Protocol/DataPacket.py" />
         <option value="$PROJECT_DIR$/Protocol/StartSessionPacket.py" />
         <option value="$PROJECT_DIR$/Protocol/AuthPacket.py" />
-        <option value="$PROJECT_DIR$/Protocol/__init__.py" />
-        <option value="$PROJECT_DIR$/Client/Client.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/ProxyServer/Server.py" />
         <option value="$PROJECT_DIR$/ProxyServer/Test.py" />
         <option value="$PROJECT_DIR$/Protocol/PlumberPacket.py" />
-        <option value="$PROJECT_DIR$/ProxyServer/IncomingData.py" />
         <option value="$PROJECT_DIR$/ProxyServer/Test2.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/IncomingData.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/IncomingPlumberData.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/OutgoingPlumberDataThread.py" />
+        <option value="$PROJECT_DIR$/Client/Client.py" />
+        <option value="$PROJECT_DIR$/Protocol/DataPacket.py" />
+        <option value="$PROJECT_DIR$/Protocol/AuthProtocol/sample.py" />
+        <option value="$PROJECT_DIR$/Protocol/__init__.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/OutgoingPlumberData.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/Server.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/OutgoingData.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/__init__.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/IncomingPlumber.py" />
+        <option value="$PROJECT_DIR$/Modules/ProxyServer/IncomingPlumber.py" />
+        <option value="$PROJECT_DIR$/Modules/ProxyServer/OutgoingPlumberData.py" />
+        <option value="$PROJECT_DIR$/Modules/ProxyServer/OutgoingData.py" />
+        <option value="$PROJECT_DIR$/Modules/ProxyServer/Server.py" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="89" />
-    <option name="y" value="-8" />
-    <option name="width" value="1" />
-    <option name="height" value="57" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="651" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -180,6 +301,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,35 +313,42 @@
             <path>
               <item name="plumber" type="b2602c69:ProjectViewProjectNode" />
               <item name="plumber" type="462c0819:PsiDirectoryNode" />
-              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="Modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="plumber" type="b2602c69:ProjectViewProjectNode" />
               <item name="plumber" type="462c0819:PsiDirectoryNode" />
-              <item name="Protocol" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plumber" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plumber" type="462c0819:PsiDirectoryNode" />
+              <item name="Modules" type="462c0819:PsiDirectoryNode" />
               <item name="ProxyServer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="plumber" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plumber" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="plumber" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plumber" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ProxyServer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Modules" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Protocol" />
     </key>
@@ -235,25 +365,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Test2">
-    <configuration name="AuthPacket" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Protocol" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="plumber" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Protocol/AuthPacket.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.Server">
     <configuration name="PlumberPacket" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -266,7 +378,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="plumber" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Protocol/PlumberPacket.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ProxyServer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="plumber" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ProxyServer/Server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -284,6 +416,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="plumber" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ProxyServer/Test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -302,6 +435,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="plumber" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ProxyServer/Test2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -320,6 +454,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="plumber" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -327,19 +462,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.AuthPacket" />
-      <item index="1" class="java.lang.String" itemvalue="Python.PlumberPacket" />
-      <item index="2" class="java.lang.String" itemvalue="Python.main" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Test2" />
+      <item index="0" class="java.lang.String" itemvalue="Python.PlumberPacket" />
+      <item index="1" class="java.lang.String" itemvalue="Python.main" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Test2" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Server" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Test2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.main" />
-        <item index="3" class="java.lang.String" itemvalue="Python.PlumberPacket" />
-        <item index="4" class="java.lang.String" itemvalue="Python.AuthPacket" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Server" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Test2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.main" />
+        <item index="4" class="java.lang.String" itemvalue="Python.PlumberPacket" />
       </list>
     </recent_temporary>
   </component>
@@ -369,38 +504,53 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="-8" width="1303" height="780" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19483568" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997955" sideWeight="0.5018868" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5043825" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.49561754" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20478088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39895287" sideWeight="0.49811321" order="5" side_tool="false" content_ui="tabs" x="76" y="344" width="1832" height="381" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42923796" sideWeight="0.49811321" order="5" side_tool="false" content_ui="tabs" x="76" y="344" width="1832" height="381" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="upload to proxy server" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload to proxy server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Protocol/AuthPacket.py</url>
+          <url>file://$PROJECT_DIR$/Modules/AuthPacket.py</url>
           <line>5</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Modules/ProxyServer/OutgoingData.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -410,7 +560,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -433,69 +583,7 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ProxyServer/Server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="15" lean-forward="true" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/DataPacket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProxyServer/Test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1422">
-          <caret line="86" column="47" lean-forward="false" selection-start-line="86" selection-start-column="47" selection-end-line="86" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/PlumberPacket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/PlumberPacket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/StartSessionPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/StartSessionPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
@@ -510,13 +598,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/__init__.py">
+    <entry file="file://$PROJECT_DIR$/Modules/Protocol/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -528,7 +614,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/AuthPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/AuthPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
@@ -536,7 +622,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/AckPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/AckPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
@@ -544,7 +630,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/PlumberPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/PlumberPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="16" selection-end-column="5" />
@@ -560,7 +646,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/AuthPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/AuthPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="13" />
@@ -568,7 +654,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/PlumberPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/PlumberPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -584,7 +670,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/PlumberPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/PlumberPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -592,21 +678,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/DataPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/DataPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/CloseSessionPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/CloseSessionPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/StartSessionPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/StartSessionPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
@@ -667,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="45" column="6" lean-forward="false" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -686,7 +771,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/CloseSessionPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/CloseSessionPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
@@ -694,17 +779,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/AckPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/AckPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
@@ -719,14 +794,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Client/Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/AuthPacket.py">
+    <entry file="file://$PROJECT_DIR$/Modules/AuthPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
@@ -734,7 +802,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProxyServer/Test.py">
+    <entry file="file://$PROJECT_DIR$/Modules/ProxyServer/Test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
@@ -770,33 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
           <caret line="630" column="6" lean-forward="false" selection-start-line="630" selection-start-column="6" selection-end-line="630" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/DataPacket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/StartSessionPacket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProxyServer/Server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -807,31 +848,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/PlumberPacket.py">
+    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/remote_sources/-1098854735/-1227933812/scapy/plist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="205">
+          <caret line="122" column="8" lean-forward="false" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProxyServer/IncomingData.py">
+    <entry file="file://$PROJECT_DIR$/Modules/StartSessionPacket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="108">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/Client/Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/ProxyServer/Test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="98" column="11" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProxyServer/Test2.py">
+    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/remote_sources/-1098854735/-1227933812/scapy/layers/inet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1332">
-          <caret line="101" column="46" lean-forward="false" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
+        <state relative-caret-position="205">
+          <caret line="669" column="6" lean-forward="false" selection-start-line="669" selection-start-column="6" selection-end-line="669" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Protocol/AuthProtocol/sample.py" />
+    <entry file="file://$PROJECT_DIR$/Modules/Protocol/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/ProxyServer/IncomingPlumber.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="6" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/ProxyServer/OutgoingPlumberData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/ProxyServer/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/ProxyServer/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/PlumberPacket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/DataPacket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/ProxyServer/OutgoingData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
