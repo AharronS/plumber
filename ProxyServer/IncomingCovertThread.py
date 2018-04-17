@@ -9,10 +9,11 @@ import struct
 
 
 def get_plumberpacket_packet(base_proto, magic, pkt):
-    if base_proto in pkt and Raw in pkt:
+    if IP in pkt and base_proto in pkt and Raw in pkt:
         logging.debug("base_proto={protocol}, magic={_magic}".format(protocol=base_proto, _magic=magic))
         plum_packet = PlumberPacket(pkt[base_proto][Raw].load)
         if plum_packet.magic == magic:
+            plum_packet.src_ip = pkt[IP].src
             return plum_packet
     return None
 
@@ -28,7 +29,7 @@ class IncomingCovertDataThread(threading.Thread):
         self.counter = 0
         self.magic = magic
         self.queue = incoming_queue
-        self.logger = logging.getLoggerClass()
+        self.logger = logging.getLogger("incomming")
 
     def run(self):
         print "Starting " + self.name
