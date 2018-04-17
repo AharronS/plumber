@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../')
 from scapy.all import *
 from Protocol import *
 from scapy.layers.inet import IP, ICMP, TCP
@@ -54,7 +56,7 @@ class IncomingDataThread(threading.Thread):
                 if Raw in pkt:
                     plum_pkt = get_plumberpacket_packet(self.protocol, self.magic, pkt)
                     if plum_pkt:
-                        logging.debug("PlumberPacket!")
+                        logging.info("incoming PlumberPacket!")
                         self.queue.put(plum_pkt)
                     else:
                         logging.debug("not plumber packet")
@@ -62,37 +64,6 @@ class IncomingDataThread(threading.Thread):
                 logging.debug(pkt.show2())
             self.counter += 1
         return custom_action
-
-
-class OutgoingDataThread(threading.Thread):
-    def __init__(self, incoming_queue, outgoing_queue, protocol=TCP, target=None, name=None):
-        super(OutgoingDataThread, self).__init__()
-        self.target = target
-        self.name = name
-        self.counter = 0
-        self.protocol = protocol
-        self.in_queue = incoming_queue
-        self.out_queue = outgoing_queue
-        return
-
-    def run(self):
-        while True:
-            if not self.in_queue.empty():
-                plumber_item = self.in_queue.get()
-                logging.debug("got plumber packet")
-                plumber_item[PlumberPacket].show()
-                if plumber_item[PlumberPacket].message_type == 2:
-                    logging.debug("got Data PlumberPacket!")
-                    data = self.protocol(plumber_item[PlumberPacket].data)
-                    data.show()
-                    data_to_send = IP(dst=plumber_item.ip)/data
-                    data_to_send.show()
-                    response = sr1(data_to_send)
-                    response.show()
-                self.counter += 1
-                time.sleep(0.001)
-        return
-
 
 if __name__ == '__main__':
     p = IncomingDataThread(incoming_queue=q1, name='icmp interpreter', packet_filter=lambda x: (x.haslayer(IP) and

@@ -10,7 +10,6 @@ class PlumberPacket(Packet):
         IPField("ip", "0.0.0.0"),
         ShortField("port", 1337),
         IntField("ack", 0),
-        ShortField("port", 1337),
         ShortField("seq", 0),
         FieldLenField("len", None, length_of="data"),
         StrLenField("data", "", length_from=lambda pkt: pkt.len)

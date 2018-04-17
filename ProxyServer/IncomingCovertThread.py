@@ -1,10 +1,10 @@
+import sys
+sys.path.append('../')
 from scapy.all import *
 from Protocol import *
-from scapy.layers.inet import IP, ICMP, TCP
+from scapy.layers.inet import IP, ICMP
 import threading
-import time
 import logging
-import Queue
 import struct
 
 
@@ -17,15 +17,18 @@ def get_plumberpacket_packet(base_proto, magic, pkt):
     return None
 
 
-class IncomingDataThread(threading.Thread):
-    def __init__(self, packet_filter, protocol=ICMP, magic=12345, target=None, name=None):
-        super(IncomingDataThread, self).__init__()
+class IncomingCovertDataThread(threading.Thread):
+    def __init__(self, incoming_queue, packet_filter, protocol=ICMP, magic=12345,
+                 target=None, name=None):
+        super(IncomingCovertDataThread, self).__init__()
         self.target = target
         self.name = name
         self.packet_filter_func = packet_filter
         self.protocol = protocol
         self.counter = 0
         self.magic = magic
+        self.queue = incoming_queue
+        self.logger = logging.getLoggerClass()
 
     def run(self):
         print "Starting " + self.name
@@ -43,15 +46,15 @@ class IncomingDataThread(threading.Thread):
     def dissect_packet(self):
         def custom_action(pkt):
             if self.protocol in pkt:
-                logging.debug("{0} packet! {1}".format(str(self.protocol), pkt.summary()))
+                self.logger.debug("{0} packet! {1}".format(str(self.protocol), pkt.summary()))
                 if Raw in pkt:
                     plum_pkt = get_plumberpacket_packet(self.protocol, self.magic, pkt)
                     if plum_pkt:
-                        logging.debug("PlumberPacket!")
-                        q1.put(plum_pkt)
+                        self.logger.info("incoming PlumberPacket!")
+                        self.queue.put(plum_pkt)
                     else:
-                        logging.debug("not plumber packet")
+                        self.logger.debug("not plumber packet")
             else:
-                logging.debug(pkt.show2())
+                self.logger.debug(pkt.show2())
             self.counter += 1
         return custom_action
