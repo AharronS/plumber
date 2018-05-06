@@ -2,7 +2,8 @@ import sys
 sys.path.append('../')
 from scapy.all import *
 from Protocol import *
-from scapy.layers.inet import IP, ICMP, TCP
+from Protocol.DataPacket import DataPacket
+from scapy.layers.inet import IP, ICMP, TCP, UDP
 import threading
 import logging
 
@@ -18,6 +19,15 @@ def get_plumberpacket_packet(base_proto, magic, pkt):
     return None
 
 
+def plumberpacket_wrapper(base_proto, magic, pkt, dst_ip):
+    plumber_pkt = DataPacket()
+    plumber_pkt.message_target = "server"
+    plumber_pkt.ip = ""
+    payload = pkt[base_proto]
+    return PlumberPacket(magic=magic, message_target="client", message_type="data",
+                         ip=dst_ip, data=payload)
+
+
 def stop_sniff(pkt):
     if ICMP in pkt and pkt[ICMP].id == 11111 and pkt[ICMP].seq == 11111:
         logging.debug("stop filter!\n" + pkt.summary())
@@ -27,7 +37,7 @@ def stop_sniff(pkt):
 
 
 class IncomingCovertDataThread(threading.Thread):
-    def __init__(self, incoming_queue, packet_filter, stop_event, protocol=ICMP, magic=12345,
+    def __init__(self, incoming_queue, packet_filter, stop_event, protocol=TCP, magic=12345,
                  target=None, name=None):
         super(IncomingCovertDataThread, self).__init__()
         self.target = target
@@ -51,7 +61,7 @@ class IncomingCovertDataThread(threading.Thread):
         def custom_action(pkt):
             if self.protocol in pkt:
                 self.logger.debug("{0} packet! {1}".format(str(self.protocol), pkt.summary()))
-                if Raw in pkt:
+                if TCP in pkt or UDP in pkt:
                     try:
                         plum_pkt = get_plumberpacket_packet(self.protocol, self.magic, pkt)
                     except Exception as ex:

@@ -9,8 +9,9 @@ class PlumberPacket(Packet):
         IntEnumField("message_type", 1, {1: "ack", 2: "data", 3: "start", 4: "auth", 5: "close"}),
         IPField("ip", "0.0.0.0"),
         IPField("src_ip", "0.0.0.0"),
-        IntField("ack", 0),
+        IntField("id", 0),
         ShortField("seq", 0),
         FieldLenField("len", None, length_of="data"),
-        StrLenField("data", "", length_from=lambda pkt: pkt.len)
+        StrLenField("data", "", length_from=lambda pkt: pkt.len),
+        ShortField("seq", 0)
     ]
