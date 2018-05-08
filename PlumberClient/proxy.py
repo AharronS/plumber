@@ -95,4 +95,3 @@ if __name__ == '__main__':
         except KeyboardInterrupt:
             print "Ctrl C - Stopping server"
             sys.exit(1)
-view raw

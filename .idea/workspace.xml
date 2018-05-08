@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb2221c5-68fa-4da4-bfff-927835c7b6ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/PlumberClient/IncomingCovertThread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlumberClient/IncomingDataThread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlumberClient/OutgoingCovertThread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlumberClient/SocksServer/Server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlumberClient/SocksServer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlumberClient/SocksServer/secretsocks/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlumberClient/SocksServer/secretsocks/secretsocks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlumberClient/SocksServer/secretsocks/server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlumberClient/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlumberClient/proxy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/IncomingCovertThread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/IncomingDataThread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/OutgoingCovertThread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PlumberClient/secret_example.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Protocol/PlumberPacket.py" beforeDir="false" afterPath="$PROJECT_DIR$/Protocol/PlumberPacket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProxyClient/Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberClient/Client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProxyClient/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberClient/SocksServer/Client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProxyClient/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberClient/tester.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProxyServer/IncomingCovertThread.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProxyServer/IncomingCovertThread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProxyServer/OutgoingCovertThread.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProxyServer/OutgoingCovertThread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProxyServer/OutgoingDataThread.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProxyServer/OutgoingDataThread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProxyServer/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProxyServer/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlumberClient/SocksServer/Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberClient/SocksServer/Client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlumberClient/SocksServer/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberClient/SocksServer/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlumberClient/proxy.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberClient/proxy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,82 +23,17 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/plumber$tester.coverage" NAME="regeorge Coverage Results" MODIFIED="1524810557922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlumberClient" />
+    <SUITE FILE_PATH="coverage/plumber$secret_example.coverage" NAME="secret_example Coverage Results" MODIFIED="1525633253086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlumberClient" />
     <SUITE FILE_PATH="coverage/plumber$example.coverage" NAME="example Coverage Results" MODIFIED="1524934843891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/PySecretSOCKS-master" />
     <SUITE FILE_PATH="coverage/plumber$Client.coverage" NAME="Client Coverage Results" MODIFIED="1524944710479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlumberClient/SocksServer" />
     <SUITE FILE_PATH="coverage/plumber$example__1_.coverage" NAME="example (1) Coverage Results" MODIFIED="1524943477607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/PySecretSOCKS-master" />
     <SUITE FILE_PATH="coverage/plumber$Test.coverage" NAME="Test Coverage Results" MODIFIED="1523972108966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ProxyServer" />
     <SUITE FILE_PATH="coverage/plumber$Test2.coverage" NAME="Test2 Coverage Results" MODIFIED="1523722249292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ProxyServer" />
     <SUITE FILE_PATH="coverage/plumber$regeorge.coverage" NAME="regeorge Coverage Results" MODIFIED="1524931061009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlumberClient" />
+    <SUITE FILE_PATH="coverage/plumber$Server.coverage" NAME="Server Coverage Results" MODIFIED="1525631697111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlumberClient/SocksServer" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Client.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PlumberClient/Client.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="99" selection-start-line="99" selection-end-line="99" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/PySecretSOCKS-master/example.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="23" column="31" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlumberClient/SocksServer/Client.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlumberPacket.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Protocol/PlumberPacket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IncomingDataThread.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlumberClient/IncomingDataThread.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OutgoingDataThread.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProxyServer/OutgoingDataThread.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" selection-start-line="10" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IncomingCovertThread.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProxyServer/IncomingCovertThread.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -168,13 +90,15 @@
         <option value="$PROJECT_DIR$/ProxyClient/tester.py" />
         <option value="$PROJECT_DIR$/Protocol/PlumberPacket.py" />
         <option value="$PROJECT_DIR$/PlumberClient/IncomingDataThread.py" />
-        <option value="$PROJECT_DIR$/PlumberClient/proxy.py" />
         <option value="$PROJECT_DIR$/PlumberClient/Client.py" />
         <option value="$PROJECT_DIR$/PlumberClient/reGeorgSocksProxy.py" />
         <option value="$USER_HOME$/Downloads/PySecretSOCKS-master/example.py" />
         <option value="$USER_HOME$/Downloads/PySecretSOCKS-master/example.py" />
-        <option value="$PROJECT_DIR$/PlumberClient/SocksServer/Server.py" />
+        <option value="$PROJECT_DIR$/PlumberClient/proxy.py" />
         <option value="$PROJECT_DIR$/PlumberClient/SocksServer/Client.py" />
+        <option value="$PROJECT_DIR$/PlumberClient/SocksServer/Server.py" />
+        <option value="$PROJECT_DIR$/PlumberClient/secret_example.py" />
+        <option value="$PROJECT_DIR$/PlumberClient/SocksServer/secretsocks/secretsocks.py" />
       </list>
     </option>
   </component>
@@ -213,6 +137,12 @@
               <item name="plumber" type="462c0819:PsiDirectoryNode" />
               <item name="PlumberClient" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="plumber" type="b2602c69:ProjectViewProjectNode" />
+              <item name="plumber" type="462c0819:PsiDirectoryNode" />
+              <item name="PlumberClient" type="462c0819:PsiDirectoryNode" />
+              <item name="SocksServer" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -227,11 +157,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Client" />
       <recent name="$PROJECT_DIR$/PlumberClient/SocksServer" />
       <recent name="$PROJECT_DIR$/ProxyClient" />
       <recent name="$PROJECT_DIR$/ProxyServer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Client" />
       <recent name="$PROJECT_DIR$/PlumberClient/SocksServer" />
       <recent name="$PROJECT_DIR$/ProxyClient" />
       <recent name="$PROJECT_DIR$" />
@@ -250,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Client">
+  <component name="RunManager" selected="Python.secret_example">
     <configuration name="Client" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="plumber" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -270,6 +202,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="Server" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="plumber" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PlumberClient/SocksServer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PlumberClient/SocksServer/Server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="example (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="plumber" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -278,25 +229,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/bin/python2.7" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads/PySecretSOCKS-master" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/PySecretSOCKS-master/example.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="example" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="plumber" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads/PySecretSOCKS-master" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -327,7 +259,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="regeorge" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="secret_example" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="plumber" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -340,26 +272,26 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Client/reGeorgSocksProxy.py" />
-      <option name="PARAMETERS" value="-l localhost -p 9999 -u google.com" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PlumberClient/secret_example.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.regeorge" />
-      <item itemvalue="Python.example" />
       <item itemvalue="Python.example (1)" />
       <item itemvalue="Python.pydevd" />
       <item itemvalue="Python.Client" />
+      <item itemvalue="Python.secret_example" />
+      <item itemvalue="Python.Server" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.secret_example" />
+        <item itemvalue="Python.Server" />
         <item itemvalue="Python.Client" />
         <item itemvalue="Python.example (1)" />
         <item itemvalue="Python.pydevd" />
-        <item itemvalue="Python.example" />
-        <item itemvalue="Python.regeorge" />
       </list>
     </recent_temporary>
   </component>
@@ -386,31 +318,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32984293" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.32359722" side_tool="true" weight="0.38704818" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32984293" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32879582" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32605305" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32879582" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32984293" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32879582" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.32605305" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.32879582" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26772907" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15298805" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" x="76" y="344" width="1832" height="381" id="Debug" order="5" sideWeight="0.67640275" weight="0.38689548" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.08268331" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="File Transfer" order="9" weight="0.08268331" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32761312" />
       <window_info anchor="right" id="Coverage" order="3" side_tool="true" />
     </layout>
@@ -425,54 +356,69 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PlumberClient/reGeorgSocksProxy.py</url>
+          <url>file://$PROJECT_DIR$/Client/reGeorgSocksProxy.py</url>
           <line>301</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PlumberClient/reGeorgSocksProxy.py</url>
+          <url>file://$PROJECT_DIR$/Client/reGeorgSocksProxy.py</url>
           <line>255</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PlumberClient/reGeorgSocksProxy.py</url>
+          <url>file://$PROJECT_DIR$/Client/reGeorgSocksProxy.py</url>
           <line>336</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PlumberClient/reGeorgSocksProxy.py</url>
+          <url>file://$PROJECT_DIR$/Client/reGeorgSocksProxy.py</url>
           <line>217</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PlumberClient/reGeorgSocksProxy.py</url>
+          <url>file://$PROJECT_DIR$/Client/reGeorgSocksProxy.py</url>
           <line>148</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PlumberClient/reGeorgSocksProxy.py</url>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Client/reGeorgSocksProxy.py</url>
           <line>182</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$USER_HOME$/Downloads/PySecretSOCKS-master/example.py</url>
           <line>31</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$USER_HOME$/Downloads/PySecretSOCKS-master/example.py</url>
           <line>39</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$USER_HOME$/Downloads/PySecretSOCKS-master/example.py</url>
           <line>75</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$USER_HOME$/Downloads/PySecretSOCKS-master/example.py</url>
           <line>93</line>
           <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PlumberClient/SocksServer/Client.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PlumberClient/SocksServer/Server.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/PlumberClient/SocksServer/secretsocks/secretsocks.py</url>
+          <line>126</line>
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -485,13 +431,8 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="41" />
+      <option name="time" value="50" />
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="data" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -513,65 +454,23 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ProxyServer/IncomingCovertThread.py">
+    <entry file="file://$PROJECT_DIR$/PlumberClient/SocksServer/secretsocks/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlumberClient/SocksServer/Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        <state relative-caret-position="198">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlumberClient/SocksServer/Client.py">
+    <entry file="file://$PROJECT_DIR$/PlumberClient/SocksServer/secretsocks/secretsocks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state relative-caret-position="630">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#82#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/AckPacket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/PlumberPacket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="4" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/AuthPacket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -644,13 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" selection-start-line="18" selection-end-line="18" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/scapy/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -662,13 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1065">
           <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Client/Client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -697,13 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlumberClient/tester.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -756,13 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlumberClient/IncomingDataThread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib/python2.7/urlparse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -792,30 +663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlumberClient/reGeorgSocksProxy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="341" column="39" selection-start-line="341" selection-start-column="39" selection-end-line="341" selection-end-column="39" />
-          <folding>
-            <element signature="e#47#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/PySecretSOCKS-master/example.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="23" column="31" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlumberClient/SocksServer/secretsocks/secretsocks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#82#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -826,10 +677,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlumberClient/SocksServer/Client.py">
+    <entry file="file://$PROJECT_DIR$/Client/Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlumberClient/tester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/reGeorgSocksProxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-469">
+          <caret line="326" column="24" selection-start-line="326" selection-start-column="24" selection-end-line="326" selection-end-column="24" />
+          <folding>
+            <element signature="e#47#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlumberClient/proxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1093">
+          <caret line="76" column="42" lean-forward="true" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlumberClient/SocksServer/secretsocks/secretsocks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="48" column="25" lean-forward="true" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlumberClient/IncomingDataThread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlumberClient/SocksServer/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlumberClient/secret_example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/IncomingCovertThread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlumberClient/IncomingCovertThread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlumberClient/SocksServer/Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="18" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -838,8 +778,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PlumberClient/Client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="99" selection-start-line="99" selection-end-line="99" />
+        <state relative-caret-position="251">
+          <caret line="101" column="26" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlumberClient/SocksServer/secretsocks/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
