@@ -1,17 +1,17 @@
-import secretsocks
+from PlumberClient import secretsocks
 import socket
 import Queue
 
 
-# The client class which connects out to a server over TCP/IP
-class Client(secretsocks.Client):
+class Server(secretsocks.Server):
     # Initialize our data channel
     def __init__(self, ip, port):
-        secretsocks.Client.__init__(self)
+        secretsocks.Server.__init__(self)
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((ip, port))
-        s.settimeout(2)
-        self.data_channel = s
+        s.bind((ip, port))
+        s.listen(1)
+        self.data_channel, nill = s.accept()
+        self.data_channel.settimeout(2)
         self.alive = True
         self.start()
 
@@ -35,5 +35,3 @@ class Client(secretsocks.Client):
             except Queue.Empty:
                 continue
             self.data_channel.sendall(data)
-
-

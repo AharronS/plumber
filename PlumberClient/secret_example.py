@@ -1,6 +1,6 @@
-from SocksServer.Client import Client
-from SocksServer.Server import Server
-from SocksServer import secretsocks
+from PlumberClient.Client import Client
+from PlumberClient.Server import Server
+from PlumberClient import secretsocks
 import threading
 
 
