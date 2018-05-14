@@ -1,4 +1,4 @@
-from PlumberClient import secretsocks
+import secretsocks
 import socket
 import Queue
 

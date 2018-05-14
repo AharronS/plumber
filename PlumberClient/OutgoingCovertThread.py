@@ -1,47 +1,62 @@
 import sys
 sys.path.append('../')
 from scapy.all import *
-from scapy.layers.inet import IP, TCP, ICMP, UDP
+from scapy.layers.inet import IP, ICMP, TCP
+from Protocol import *
+from Protocol.DataPacket import DataPacket
 import threading
 import logging
 import traceback
 
 
-def generate_icmp_wrapper(plumber_pkt):
-    ip_layer = IP(src=plumber_pkt.src_ip, dst=plumber_pkt.ip)
-    icmp_layer = ICMP(type="echo-reply")
-    icmp_layer.id, icmp_layer.seq = plumber_pkt.id, plumber_pkt.seq
-    plumber_pkt.message_target = "client"
+def generate_icmp_wrapper(plumber_pkt, dst_ip):
+    ip_layer = IP(dst=dst_ip)
+    icmp_layer = ICMP(type="echo-request")
     return ip_layer/icmp_layer/plumber_pkt
 
 
+def plumberpacket_wrapper(magic, socks_pkt):
+    plumber_pkt = DataPacket()
+    plumber_pkt.message_target = "server"
+    plumber_pkt.data = socks_pkt
+    plumber_pkt.magic = magic
+
+    return plumber_pkt
+
+
+def get_socks_packet(magic, pkt):
+    if IP in pkt and Raw in pkt:
+        logging.debug("base_proto={protocol}, magic={_magic}".format(protocol=TCP, _magic=magic))
+        plum_packet = PlumberPacket(pkt[ICMP][Raw].load)
+        if plum_packet.magic == magic:
+            return plum_packet.data
+    return None
+
+
 class OutgoingCovertThread(threading.Thread):
-    def __init__(self, incoming_queue, stop_event, protocol=TCP, target=None, name=None):
+    def __init__(self, out_queue, in_queue, stop_event, magic, server_ip, name=None):
         super(OutgoingCovertThread, self).__init__()
-        self.target = target
+        self.target = server_ip
         self.name = name
+        self.magic = magic
         self.counter = 0
-        self.protocol = protocol
-        self.in_queue = incoming_queue
-        self.logger = logging.getLogger("Covert response")
+        self.out_queue = out_queue
+        self.in_queue = in_queue
+        self.logger = logging.getLogger("Outgoing Channel")
         self.stop_event = stop_event
 
     def run(self):
         while not self.stop_event.is_set():
-            if not self.in_queue.empty():
+            if not self.out_queue.empty():
                 try:
-                    res_pkt = self.in_queue.get()
-                    logging.info("got packet")
-                    logging.debug(res_pkt.show(dump=True))
-                    if res_pkt.data:
-                        out_pkt = generate_icmp_wrapper(res_pkt)
-                    else:
-                        self.logger.warning("weird packet" + res_pkt.show(dump=True))
-                        continue
-                    self.logger.debug("sending plumber packet response to client:{0}".format(
-                        out_pkt.show2(dump=True)
-                    ))
-                    send(out_pkt)
+                    socks_pkt = self.out_queue.get()
+                    self.logger.debug("got socks packet")
+                    plum_pkt = plumberpacket_wrapper(self.magic, socks_pkt)
+                    icmp_pkt = generate_icmp_wrapper(plum_pkt, self.target)
+                    self.logger.debug("{}".format(icmp_pkt.show2(dump=True)))
+                    covert_res = sr1(icmp_pkt, timeout=1000)
+                    socks_res = get_socks_packet(self.magic, covert_res)
+                    self.in_queue.put(socks_res)
                     self.counter += 1
                     time.sleep(0.001)
                 except Exception as ex:

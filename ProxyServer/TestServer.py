@@ -68,7 +68,7 @@ class IncomingDataThread(threading.Thread):
 if __name__ == '__main__':
     p = IncomingDataThread(incoming_queue=q1, name='icmp interpreter', packet_filter=lambda x: (x.haslayer(IP) and
                                                                              x.haslayer(ICMP) and
-                                                                             x.getlayer(ICMP).type == 8))
+                                                                                x.getlayer(ICMP).type == 8))
 
     c = OutgoingDataThread(incoming_queue=q1, outgoing_queue=q2, name='consumer')
 
