@@ -16,12 +16,16 @@ class TCPClient(threading.Thread):
         # TODO: add error handling
         remote_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         remote_socket.connect((self.remote_host, self.remote_port))
-        while True:
-            s = threading.Thread(target=self.send_to_server, args=(self.in_queue, remote_socket,))
-            r = threading.Thread(target=self.get_response_from_destination, args=(remote_socket,
-                                                                                  self.out_queue))
-            s.start()
-            r.start()
+
+        s = threading.Thread(target=self.send_to_server, args=(self.in_queue, remote_socket,))
+        r = threading.Thread(target=self.get_response_from_destination, args=(remote_socket,
+                                                                              self.out_queue))
+        s.start()
+        r.start()
+
+        s.join()
+        r.join()
+
         print "[+] Releasing resources..."
         remote_socket.shutdown(socket.SHUT_RDWR)
         remote_socket.close()
@@ -39,7 +43,7 @@ class TCPClient(threading.Thread):
         src.close()
 
     @staticmethod
-    def send_to_server(in_queue, dst):
+    def send_to_server(in_queue, out_queue, dst):
         while True:
             if not in_queue.empty():
                 try:
@@ -47,7 +51,11 @@ class TCPClient(threading.Thread):
                     if len(tcp_data) == 0:
                         print "[-] No data received! Breaking..."
                         continue
-                    dst.send(tcp_data)
+                    dst.send(tcp_data.data)
+                    tcp_res = dst.recv()
+                    # TODO: check if legal response
+                    tcp_data.data = tcp_res
+                    out_queue.put(tcp_data)
                 except Exception as ex:
                     logging.warning("{0}".format(ex.message))
                     traceback.print_exc()

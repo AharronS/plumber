@@ -2,6 +2,7 @@ import sys
 sys.path.append('../')
 from scapy.all import *
 from scapy.layers.inet import IP, TCP, ICMP, UDP
+from Protocol import DataPacket
 import threading
 import logging
 import traceback
@@ -15,8 +16,17 @@ def generate_icmp_wrapper(plumber_pkt):
     return ip_layer/icmp_layer/plumber_pkt
 
 
+def plumberpacket_wrapper(magic, tcp_pkt):
+    plumber_pkt = DataPacket()
+    plumber_pkt.message_target = "server"
+    plumber_pkt.data = tcp_pkt
+    plumber_pkt.magic = magic
+    return plumber_pkt
+
+
 class OutgoingCovertThread(threading.Thread):
-    def __init__(self, incoming_queue, stop_event, protocol=TCP, target=None, name=None):
+    def __init__(self, incoming_queue, stop_event, protocol=TCP, target=None, name=None,
+                 magic=12345):
         super(OutgoingCovertThread, self).__init__()
         self.target = target
         self.name = name
@@ -24,6 +34,7 @@ class OutgoingCovertThread(threading.Thread):
         self.protocol = protocol
         self.in_queue = incoming_queue
         self.logger = logging.getLogger("Covert response")
+        self.magic = magic
         self.stop_event = stop_event
 
     def run(self):
@@ -32,8 +43,8 @@ class OutgoingCovertThread(threading.Thread):
                 try:
                     res_pkt = self.in_queue.get()
                     logging.info("got packet")
-                    logging.debug(res_pkt.show(dump=True))
-                    if res_pkt.data:
+                    if res_pkt:
+                        pl_packet = plumberpacket_wrapper(self.magic, res_pkt)
                         out_pkt = generate_icmp_wrapper(res_pkt)
                     else:
                         self.logger.warning("weird packet" + res_pkt.show(dump=True))
