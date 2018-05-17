@@ -37,10 +37,15 @@ class OutgoingDataThread(threading.Thread):
                     data = self.protocol(plumber_item[PlumberPacket].data)
                     if hasattr(data, 'chksum'):
                         del data.chksum
-                    data_to_send = IP(dst=plumber_item.ip)/data
+
+                    # data_to_send = IP(dst=plumber_item.ip)/data
+                    # TODO: remove this line
+                    del data.sport
+                    data.dport = 80
+                    data_to_send = IP(dst="example.com")/data
 
                     self.logger.debug("sending:\n{0}".format(data_to_send.summary()))
-                    response = sr1(data_to_send)
+                    response = sr1(data_to_send, timeout=2)
                     self.logger.debug("recieve:\n{0}".format(response.summary()))
 
                     res_plumber = copy.deepcopy(plumber_item)

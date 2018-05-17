@@ -2,7 +2,7 @@ import sys
 sys.path.append('../')
 from scapy.all import *
 from Protocol import *
-from scapy.layers.inet import IP, ICMP, TCP
+from scapy.layers.inet import IP, ICMP
 import threading
 import logging
 

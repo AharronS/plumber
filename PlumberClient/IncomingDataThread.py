@@ -2,8 +2,7 @@ import sys
 sys.path.append('../')
 from scapy.all import *
 from Protocol import *
-from Protocol.DataPacket import DataPacket
-from scapy.layers.inet import IP, ICMP, TCP, UDP
+from scapy.layers.inet import IP, ICMP, TCP
 import threading
 import logging
 
@@ -19,15 +18,6 @@ def get_plumberpacket_packet(base_proto, magic, pkt):
     return None
 
 
-def plumberpacket_wrapper(base_proto, magic, pkt, dst_ip):
-    plumber_pkt = DataPacket()
-    plumber_pkt.message_target = "server"
-    plumber_pkt.ip = ""
-    payload = pkt[base_proto]
-    return PlumberPacket(magic=magic, message_target="client", message_type="data",
-                         ip=dst_ip, data=payload)
-
-
 def stop_sniff(pkt):
     if ICMP in pkt and pkt[ICMP].id == 11111 and pkt[ICMP].seq == 11111:
         logging.debug("stop filter!\n" + pkt.summary())
@@ -36,18 +26,17 @@ def stop_sniff(pkt):
         return False
 
 
-class IncomingCovertDataThread(threading.Thread):
-    def __init__(self, incoming_queue, packet_filter, stop_event, protocol=TCP, magic=12345,
-                 target=None, name=None):
-        super(IncomingCovertDataThread, self).__init__()
+class IncomingDataThread(threading.Thread):
+    def __init__(self, out_queue, packet_filter, stop_event, protocol=TCP,
+                 target=None, name="TCPThread"):
+        super(IncomingDataThread, self).__init__()
         self.target = target
         self.name = name
         self.packet_filter_func = packet_filter
         self.protocol = protocol
         self.counter = 0
-        self.magic = magic
-        self.queue = incoming_queue
-        self.logger = logging.getLogger("incomming")
+        self.queue = out_queue
+        self.logger = logging.getLogger("IncomingData")
         self.stop_event = stop_event
 
     def run(self):
@@ -60,19 +49,12 @@ class IncomingCovertDataThread(threading.Thread):
     def dissect_packet(self):
         def custom_action(pkt):
             if self.protocol in pkt:
-                self.logger.debug("{0} packet! {1}".format(str(self.protocol), pkt.summary()))
-                if TCP in pkt or UDP in pkt:
+                if TCP in pkt:
                     try:
-                        plum_pkt = get_plumberpacket_packet(self.protocol, self.magic, pkt)
-                    except Exception as ex:
-                        self.logger.info("unknown packet")
-                        return custom_action
-                    if plum_pkt:
-                        self.logger.info("incoming PlumberPacket!")
-                        self.queue.put(plum_pkt)
-                    else:
-                        self.logger.debug("not plumber packet")
-            else:
-                self.logger.debug("unknown protocol: \n" + pkt.show(dump=True))
+                        tcp_pkt = pkt[self.protocol]
+                        self.logger.debug("{}\nput on out queue.".format(tcp_pkt.summary()))
+                        self.queue.put(tcp_pkt)
+                    except Exception, ex:
+                        self.logger.exception("TCP Packet Error")
             self.counter += 1
         return custom_action
