@@ -9,9 +9,10 @@ import traceback
 
 
 def generate_icmp_wrapper(plumber_pkt):
-    ip_layer = IP(src=plumber_pkt.src_ip, dst=plumber_pkt.ip)
+    ip_layer = IP(dst=plumber_pkt.src_ip)
     icmp_layer = ICMP(type="echo-reply")
-    icmp_layer.id, icmp_layer.seq = plumber_pkt.id, plumber_pkt.seq
+    icmp_layer.id = plumber_pkt.id
+    icmp_layer.seq = plumber_pkt.seq
     plumber_pkt.message_target = "client"
     return ip_layer/icmp_layer/plumber_pkt
 
@@ -42,9 +43,8 @@ class OutgoingCovertThread(threading.Thread):
             if not self.in_queue.empty():
                 try:
                     res_pkt = self.in_queue.get()
-                    logging.info("got packet")
+                    logging.info("got packet, {}".format(res_pkt.show2(dump=True)))
                     if res_pkt:
-                        pl_packet = plumberpacket_wrapper(self.magic, res_pkt)
                         out_pkt = generate_icmp_wrapper(res_pkt)
                     else:
                         self.logger.warning("weird packet" + res_pkt.show(dump=True))

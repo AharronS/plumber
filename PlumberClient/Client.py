@@ -25,7 +25,7 @@ def main():
     #                                                       x.getlayer(TCP).dport == listen_port))
 
     # local_host, local_port, max_connection, in_queue, stop_event
-    c = TCPServer(local_host="127.0.0.1", local_port=listen_port, max_connection=10,
+    c = TCPServer(local_host="127.0.0.1", local_port=listen_port, max_connection=1,
                   stop_event=_stop_event, in_queue=in_queue, out_queue=out_queue)
     # out_queue, in_queue, stop_event, magic, server_ip, name
     w = OutgoingCovertThread(name='outgoing covert', out_queue=out_queue,

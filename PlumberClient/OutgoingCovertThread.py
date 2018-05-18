@@ -7,11 +7,12 @@ from Protocol.DataPacket import DataPacket
 import threading
 import logging
 import traceback
+from random import randint
 
 
 def generate_icmp_wrapper(plumber_pkt, dst_ip):
     ip_layer = IP(dst=dst_ip)
-    icmp_layer = ICMP(type="echo-request")
+    icmp_layer = ICMP(type="echo-request", id=randint(1, 65530))
     return ip_layer/icmp_layer/plumber_pkt
 
 
@@ -25,7 +26,7 @@ def plumberpacket_wrapper(magic, tcp_pkt):
 
 def get_plumberpacket_packet(magic, pkt):
     if IP in pkt and ICMP in pkt and Raw in pkt:
-        logging.debug("base_proto={protocol}, magic={_magic}".format(protocol=base_proto, _magic=magic))
+        logging.debug("base_proto={protocol}, magic={_magic}".format(protocol=TCP, _magic=magic))
         plum_packet = PlumberPacket(pkt[ICMP][Raw].load)
         if plum_packet.magic == magic:
             plum_packet.src_ip = pkt[IP].src
@@ -58,7 +59,7 @@ class OutgoingCovertThread(threading.Thread):
                     self.logger.debug("response icmp: {}".format(covert_res.show2(dump=True)))
                     plum_pkt = get_plumberpacket_packet(self.magic, covert_res)
                     if plum_pkt is not None:
-                        self.in_queue.put(plum_pkt.data)
+                        self.in_queue.put(plum_pkt)
                         self.counter += 1
                 except Exception as ex:
                     self.logger.warning("{0}".format(ex.message))

@@ -50,7 +50,7 @@ class IncomingCovertDataThread(threading.Thread):
     def dissect_packet(self):
         def custom_action(pkt):
             if self.protocol in pkt:
-                self.logger.debug("{0} packet! {1}".format(str(self.protocol), pkt.summary()))
+                self.logger.debug("{}".format(pkt.show2(dump=True)))
                 if Raw in pkt:
                     try:
                         plum_pkt = get_plumberpacket_packet(self.protocol, self.magic, pkt)

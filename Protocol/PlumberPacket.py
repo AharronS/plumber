@@ -12,6 +12,5 @@ class PlumberPacket(Packet):
         IntField("id", 0),
         ShortField("seq", 0),
         FieldLenField("len", None, length_of="data"),
-        StrLenField("data", "", length_from=lambda pkt: pkt.len),
-        ShortField("seq", 0)
+        StrLenField("data", "", length_from=lambda pkt: pkt.len)
     ]

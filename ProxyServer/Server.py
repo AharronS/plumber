@@ -26,7 +26,7 @@ def main():
                                                           x.getlayer(ICMP).type == 8))
     # c = OutgoingDataThread(name='outgoing sender', stop_event=_stop_event,
     #                        incoming_queue=q1, outgoing_queue=q2)
-    c = TCPClient("www.example.com", 80, in_queue, out_queue, _stop_event)
+    c = TCPClient("93.184.216.34", 80   , in_queue, out_queue, _stop_event)
     w = OutgoingCovertThread(name='outgoing covert', stop_event=_stop_event,
                              incoming_queue=out_queue)
 
