@@ -19,12 +19,6 @@ def main():
     listen_port = 51234
     in_queue = Queue.Queue(BUF_SIZE)
     out_queue = Queue.Queue(BUF_SIZE)
-    # p = IncomingDataThread(name='TCP interpreter', stop_event=_stop_event,
-    #                        out_queue=out_queue,
-    #                        packet_filter=lambda x: (x.haslayer(IP) and x.haslayer(TCP) and
-    #                                                       x.getlayer(TCP).dport == listen_port))
-
-    # local_host, local_port, max_connection, in_queue, stop_event
     c = TCPServer(local_host="127.0.0.1", local_port=listen_port, max_connection=1,
                   stop_event=_stop_event, in_queue=in_queue, out_queue=out_queue)
     # out_queue, in_queue, stop_event, magic, server_ip, name

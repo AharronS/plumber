@@ -11,6 +11,4 @@ class PlumberPacket(Packet):
         IPField("src_ip", "0.0.0.0"),
         IntField("id", 0),
         ShortField("seq", 0),
-        FieldLenField("len", None, length_of="data"),
-        StrLenField("data", "", length_from=lambda pkt: pkt.len)
     ]

@@ -21,9 +21,9 @@ class TCPServer(threading.Thread):
         while True and not self.stop_event.is_set():
             local_socket, local_address = server_socket.accept()
             print "[+] Tunnel connected! Tranfering data..."
-            s = threading.Thread(target=self.send_to_client, args=(self.in_queue, local_socket, ))
-            r = threading.Thread(target=self.response_to_request, args=(local_socket,
-                                                                        self.out_queue))
+            s = threading.Thread(target=self.get_data_from_queue, args=(self.in_queue, local_socket,))
+            r = threading.Thread(target=self.get_data_from_socket, args=(local_socket,
+                                                                         self.out_queue))
             s.start()
             r.start()
         print "[+] Releasing resources..."
@@ -35,19 +35,20 @@ class TCPServer(threading.Thread):
         print "[+] Server shuted down!"
 
     @staticmethod
-    def response_to_request(src, out_queue):
+    def get_data_from_socket(src, out_queue):
         while True:
-            buffer_from_socket = src.recv(0x400)
-            if len(buffer_from_socket) == 0:
+            data_from_socket = src.recv(0x400)
+            if len(data_from_socket) == 0:
                 print "[-] No data received! Breaking..."
                 # TODO: add indicative exceptionS
-                raise Exception('TCP Exception')
-            out_queue.put(buffer_from_socket)
+                # raise Exception('TCP Exception')
+                break
+            out_queue.put(data_from_socket)
         src.shutdown(socket.SHUT_RDWR)
         src.close()
 
     @staticmethod
-    def send_to_client(in_queue, dst):
+    def get_data_from_queue(in_queue, dst):
         while True:
             if not in_queue.empty():
                 try:
