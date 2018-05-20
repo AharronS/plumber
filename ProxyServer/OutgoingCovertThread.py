@@ -13,16 +13,7 @@ def generate_icmp_wrapper(plumber_pkt):
     icmp_layer = ICMP(type="echo-reply")
     icmp_layer.id = plumber_pkt.id
     icmp_layer.seq = plumber_pkt.seq
-    plumber_pkt.message_target = "client"
-    return ip_layer/icmp_layer/plumber_pkt
-
-
-def plumberpacket_wrapper(magic, tcp_pkt):
-    plumber_pkt = DataPacket()
-    plumber_pkt.message_target = "server"
-    plumber_pkt.data = tcp_pkt
-    plumber_pkt.magic = magic
-    return plumber_pkt
+    return ip_layer / icmp_layer / plumber_pkt
 
 
 class OutgoingCovertThread(threading.Thread):
@@ -43,7 +34,7 @@ class OutgoingCovertThread(threading.Thread):
             if not self.in_queue.empty():
                 try:
                     res_pkt = self.in_queue.get()
-                    logging.info("got packet, {}".format(res_pkt.show2(dump=True)))
+                    logging.info("got packet, {}".format(res_pkt.summary()))
                     if res_pkt:
                         out_pkt = generate_icmp_wrapper(res_pkt)
                     else:

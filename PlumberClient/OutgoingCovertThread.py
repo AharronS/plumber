@@ -13,26 +13,30 @@ from random import randint
 def generate_icmp_wrapper(plumber_pkt, dst_ip):
     ip_layer = IP(dst=dst_ip)
     icmp_layer = ICMP(type="echo-request", id=randint(1, 65530))
-    return ip_layer/icmp_layer/plumber_pkt
+    return ip_layer / icmp_layer / plumber_pkt
 
 
-def plumberpacket_wrapper(magic, tcp_pkt):
+def plumberpacket_wrapper(magic, tcp_data):
     plumber_pkt = DataPacket()
     plumber_pkt.message_target = "server"
-    plumber_pkt.data = tcp_pkt
     plumber_pkt.magic = magic
-    return plumber_pkt
+    return plumber_pkt / tcp_data
 
+def generate_poll_packet(magic, dst_ip):
+    plumber_pkt = PollPacket()
+    plumber_pkt.message_target = "server"
+    plumber_pkt.magic = magic
+    return generate_icmp_wrapper(plumber_pkt, dst_ip)
 
 def get_plumberpacket_packet(magic, pkt):
     if IP in pkt and ICMP in pkt and Raw in pkt:
-        logging.debug("base_proto={protocol}, magic={_magic}".format(protocol=TCP, _magic=magic))
         plum_packet = PlumberPacket(pkt[ICMP][Raw].load)
         if plum_packet.magic == magic:
             plum_packet.src_ip = pkt[IP].src
             plum_packet.id, plum_packet.seq = pkt[ICMP].id, pkt[ICMP].seq
             return plum_packet
-    return None
+        else:
+            raise Exception("Not PlumberPacket!")
 
 
 class OutgoingCovertThread(threading.Thread):
@@ -51,18 +55,40 @@ class OutgoingCovertThread(threading.Thread):
         while not self.stop_event.is_set():
             if not self.out_queue.empty():
                 try:
-                    tcp_packet = self.out_queue.get()
-                    plum_pkt = plumberpacket_wrapper(self.magic, tcp_packet)
+                    # get data from tcp socket queue
+                    tcp_data = self.out_queue.get()
+                    plum_pkt = plumberpacket_wrapper(self.magic, tcp_data)
                     icmp_pkt = generate_icmp_wrapper(plum_pkt, self.target)
                     self.logger.debug("send icmp: {}".format(icmp_pkt.summary()))
-                    covert_res = sr1(icmp_pkt, timeout=1000)
-                    self.logger.debug("response icmp: {}".format(covert_res.show2(dump=True)))
-                    plum_pkt = get_plumberpacket_packet(self.magic, covert_res)
-                    if plum_pkt is not None:
-                        self.in_queue.put(plum_pkt)
-                        self.counter += 1
+                    # TODO: Add loop for sending packet
+                    covert_res = sr1(icmp_pkt, timeout=100)
+                    if covert_res:
+                        self.logger.debug("response icmp: {}".format(covert_res.show2(dump=True)))
+                        try:
+                            plum_pkt = get_plumberpacket_packet(self.magic, covert_res)
+                            if plum_pkt is not None:
+                                self.in_queue.put(plum_pkt)
+                                self.counter += 1
+                        except Exception:
+                            self.logger.exception("Get plumber packet failed")
+                            continue
                 except Exception as ex:
                     self.logger.warning("{0}".format(ex.message))
                     traceback.print_exc()
                     continue
+            else:
+                # TODO: Arrange the poll process
+                poll_pkt = generate_poll_packet(self.magic, self.target)
+                covert_res = sr1(poll_pkt, timeout=3)
+                if covert_res:
+                    if covert_res:
+                        self.logger.debug("response icmp: {}".format(covert_res.show2(dump=True)))
+                        try:
+                            plum_pkt = get_plumberpacket_packet(self.magic, covert_res)
+                            if plum_pkt is not None:
+                                self.in_queue.put(plum_pkt)
+                                self.counter += 1
+                        except Exception:
+                            self.logger.exception("Get poll packet failed")
+                            continue
         return

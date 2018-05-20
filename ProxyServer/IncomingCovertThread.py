@@ -7,15 +7,15 @@ import threading
 import logging
 
 
-def get_plumberpacket_packet(base_proto, magic, pkt):
-    if IP in pkt and base_proto in pkt and Raw in pkt:
-        logging.debug("base_proto={protocol}, magic={_magic}".format(protocol=base_proto, _magic=magic))
-        plum_packet = PlumberPacket(pkt[base_proto][Raw].load)
+def get_plumberpacket_packet(magic, pkt):
+    if IP in pkt and ICMP in pkt and Raw in pkt:
+        plum_packet = PlumberPacket(pkt[ICMP][Raw].load)
         if plum_packet.magic == magic:
             plum_packet.src_ip = pkt[IP].src
             plum_packet.id, plum_packet.seq = pkt[ICMP].id, pkt[ICMP].seq
             return plum_packet
-    return None
+        else:
+            raise Exception("Not PlumberPacket!")
 
 
 def stop_sniff(pkt):
@@ -36,7 +36,7 @@ class IncomingCovertDataThread(threading.Thread):
         self.protocol = protocol
         self.counter = 0
         self.magic = magic
-        self.queue = incoming_queue
+        self.in_queue = incoming_queue
         self.logger = logging.getLogger("incomming")
         self.stop_event = stop_event
 
@@ -50,18 +50,15 @@ class IncomingCovertDataThread(threading.Thread):
     def dissect_packet(self):
         def custom_action(pkt):
             if self.protocol in pkt:
-                self.logger.debug("{}".format(pkt.show2(dump=True)))
+                self.logger.debug("incoming packet:\n{}".format(pkt.show2(dump=True)))
                 if Raw in pkt:
                     try:
-                        plum_pkt = get_plumberpacket_packet(self.protocol, self.magic, pkt)
-                    except Exception as ex:
-                        self.logger.info("unknown packet")
-                        return custom_action
-                    if plum_pkt:
+                        plum_pkt = get_plumberpacket_packet(self.magic, pkt)
                         self.logger.info("incoming PlumberPacket!")
-                        self.queue.put(plum_pkt)
-                    else:
-                        self.logger.debug("not plumber packet")
+                        self.in_queue.put(plum_pkt)
+                    except Exception as ex:
+                        self.logger.exception("unknown packet")
+                        return custom_action
             else:
                 self.logger.debug("unknown protocol: \n" + pkt.show(dump=True))
             self.counter += 1

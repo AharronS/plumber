@@ -53,13 +53,11 @@ class TCPServer(threading.Thread):
             if not in_queue.empty():
                 try:
                     tcp_pkt = in_queue.get()
-                    # if len(tcp_pkt) == 0:
-                    #     print "[-] No data received! Breaking..."
-                    #     continue
+                    if len(tcp_pkt) == 0:
+                        print "[-] No data received! Breaking..."
+                        continue
                     print "sending to client:\n{}".format(tcp_pkt.show2(dump=True))
-                    data = tcp_pkt.data
-                    if Raw in tcp_pkt:
-                        data += str(tcp_pkt[Raw])
+                    data = bytes(tcp_pkt[Raw])
                     dst.send(data)
                 except Exception as ex:
                     logging.warning("{0}".format(ex.message))
