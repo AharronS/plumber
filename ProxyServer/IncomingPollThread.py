@@ -1,7 +1,8 @@
 import sys
 sys.path.append('../')
 from scapy.all import *
-from scapy.layers.inet import IP, TCP, ICMP
+from scapy.layers.inet import IP, TCP, ICMP, UDP
+from PlumberDataTypes import DataPacket
 import threading
 import logging
 import traceback
@@ -15,16 +16,17 @@ def generate_icmp_wrapper(plumber_pkt):
     return ip_layer / icmp_layer / plumber_pkt
 
 
-class OutgoingCovertThread(threading.Thread):
-    def __init__(self, incoming_queue, stop_event, protocol=TCP, target=None, name=None,
+class IncomingPollThread(threading.Thread):
+    def __init__(self, incoming_queue, out_queue, stop_event, protocol=TCP, target=None, name=None,
                  magic=12345):
-        super(OutgoingCovertThread, self).__init__()
+        super(IncomingPollThread, self).__init__()
         self.target = target
         self.name = name
         self.counter = 0
         self.protocol = protocol
         self.in_queue = incoming_queue
-        self.logger = logging.getLogger("Covert response")
+        self.out_queue = out_queue
+        self.logger = logging.getLogger("incoming poll requests")
         self.magic = magic
         self.stop_event = stop_event
 

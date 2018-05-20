@@ -8,7 +8,8 @@ from OutgoingCovertThread import OutgoingCovertThread
 from TCPClient import TCPClient
 import threading
 import secretsocks
-from SocksServer import Server
+import subprocess
+import os
 
 
 BUF_SIZE = 100
@@ -25,9 +26,13 @@ def main():
     secretsocks.set_debug(True)
     in_queue = Queue.Queue(BUF_SIZE)
     out_queue = Queue.Queue(BUF_SIZE)
+    poll_queue = Queue.Queue(BUF_SIZE)
+
+    p = subprocess.Popen(['/usr/bin/python3', '/root/SocksServer.py'])
+    print "Starting soscks Sever : " + str(p.pid)
 
     p = IncomingCovertDataThread(name='icmp interpreter', stop_event=_stop_event,
-                                 incoming_queue=in_queue,
+                                 incoming_queue=in_queue, poll_queue=poll_queue,
                                  packet_filter=lambda x: (x.haslayer(IP) and x.haslayer(ICMP) and
                                                           x.getlayer(ICMP).type == 8))
     c = TCPClient("0.0.0.0", 9011, in_queue, out_queue, _stop_event, magic=12345)

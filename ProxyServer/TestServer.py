@@ -1,7 +1,7 @@
 import sys
 sys.path.append('../')
 from scapy.all import *
-from Protocol import *
+from PlumberDataTypes import *
 from scapy.layers.inet import IP, ICMP, TCP
 import threading
 import time

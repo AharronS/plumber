@@ -1,7 +1,7 @@
 import sys
 sys.path.append('../')
 from scapy.all import *
-from Protocol import *
+from PlumberDataTypes import *
 from scapy.layers.inet import IP, ICMP, TCP
 import threading
 import logging
@@ -27,7 +27,7 @@ def stop_sniff(pkt):
 
 
 class IncomingCovertDataThread(threading.Thread):
-    def __init__(self, incoming_queue, packet_filter, stop_event, protocol=ICMP, magic=12345,
+    def __init__(self, incoming_queue, poll_queue, packet_filter, stop_event, protocol=ICMP, magic=12345,
                  target=None, name=None):
         super(IncomingCovertDataThread, self).__init__()
         self.target = target
@@ -37,6 +37,7 @@ class IncomingCovertDataThread(threading.Thread):
         self.counter = 0
         self.magic = magic
         self.in_queue = incoming_queue
+        self.poll_queue = poll_queue
         self.logger = logging.getLogger("incomming")
         self.stop_event = stop_event
 
@@ -55,7 +56,10 @@ class IncomingCovertDataThread(threading.Thread):
                     try:
                         plum_pkt = get_plumberpacket_packet(self.magic, pkt)
                         self.logger.info("incoming PlumberPacket!")
-                        self.in_queue.put(plum_pkt)
+                        if plum_pkt.message_type == 2:
+                            self.in_queue.put(plum_pkt)
+                        elif plum_pkt.message_type == 5:
+                            self.poll_queue.put(plum_pkt)
                     except Exception as ex:
                         self.logger.exception("unknown packet")
                         return custom_action

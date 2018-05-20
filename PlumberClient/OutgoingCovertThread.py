@@ -2,8 +2,8 @@ import sys
 sys.path.append('../')
 from scapy.all import *
 from scapy.layers.inet import IP, ICMP, TCP
-from Protocol import *
-from Protocol.DataPacket import DataPacket
+from PlumberDataTypes import *
+from PlumberDataTypes.DataPacket import DataPacket
 import threading
 import logging
 import traceback
@@ -76,10 +76,12 @@ class OutgoingCovertThread(threading.Thread):
                     self.logger.warning("{0}".format(ex.message))
                     traceback.print_exc()
                     continue
+
+             # generate poll requests
             else:
                 # TODO: Arrange the poll process
                 poll_pkt = generate_poll_packet(self.magic, self.target)
-                covert_res = sr1(poll_pkt, timeout=3)
+                covert_res = sr1(poll_pkt, timeout=5)
                 if covert_res:
                     if covert_res:
                         self.logger.debug("response icmp: {}".format(covert_res.show2(dump=True)))

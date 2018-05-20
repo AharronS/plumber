@@ -1,6 +1,6 @@
 import sys
 sys.path.append('../')
-from Protocol import *
+from PlumberDataTypes import *
 from scapy.all import *
 import logging
 
@@ -48,23 +48,19 @@ class TCPClient(threading.Thread):
             if not in_queue.empty():
                 try:
                     tcp_data = in_queue.get()
-                    if isinstance(tcp_data, PlumberPacket) and tcp_data.message_type == 2:
-                        self.logger.debug("got data plum packet to send over socks:\n{}".format(tcp_data))
-                        socks_socket.sendall(bytes(tcp_data[Raw]))
-                        # spawn new thread for receive data
-                        # get_data_thread = threading.Thread(target=self.get_data,
-                        #                                    args=(tcp_data, self.out_queue, socks_socket,))
-                        # get_data_thread.start()
+                    self.logger.debug("got data plum packet to send over socks:\n{}".format(tcp_data))
+                    socks_socket.sendall(bytes(tcp_data[Raw]))
+                    # spawn new thread for receive data
+                    # get_data_thread = threading.Thread(target=self.get_data,
+                    #                                    args=(tcp_data, self.out_queue, socks_socket,))
+                    # get_data_thread.start()
 
-                        tcp_res = socks_socket.recv(0x400)
-                        out_queue.put(plumberpacket_data_res(tcp_res, tcp_data))
-                        while tcp_res:
-                            tcp_res = socks_socket.recv(0x400)
-                            out_queue.put(plumberpacket_data_res(tcp_res, tcp_data))
+                    tcp_res = socks_socket.recv(0x400)
+                    out_queue.put(plumberpacket_data_res(tcp_res, tcp_data))
                 except Exception as ex:
-                    logging.warning("{0}".format(ex.message))
+                    logging.exception("sending to socks server failed")
                     traceback.print_exc()
-                    break
+                    continue
 
     def get_data(self, old_pkt, out_queue, socks_socket):
         while not self.stop_event.is_set():

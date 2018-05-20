@@ -5,34 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb2221c5-68fa-4da4-bfff-927835c7b6ed" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/PlumberClient/SocksClient.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PlumberClient/TwistedServer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Protocol/PollPacket.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProxyServer/SocksServer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestSocksClient.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestSocksServer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secretsocks/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secretsocks/secretsocks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/secretsocks/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProxyServer/IncomingPollThread.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/Client.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/IncomingCovertThread.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/IncomingDataThread.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/OutgoingCovertThread.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberClient/TCPServer_socket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/reGeorgSocksProxy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlumberClient/Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberClient/Client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PlumberClient/OutgoingCovertThread.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberClient/OutgoingCovertThread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlumberClient/TCPServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberClient/TCPServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Protocol/PlumberPacket.py" beforeDir="false" afterPath="$PROJECT_DIR$/Protocol/PlumberPacket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Protocol/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Protocol/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Protocol/AckPacket.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberDataTypes/AckPacket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Protocol/AuthPacket.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberDataTypes/AuthPacket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Protocol/CloseSessionPacket.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberDataTypes/CloseSessionPacket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Protocol/DataPacket.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberDataTypes/DataPacket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Protocol/PlumberPacket.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberDataTypes/PlumberPacket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Protocol/PollPacket.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberDataTypes/PollPacket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Protocol/StartSessionPacket.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberDataTypes/StartSessionPacket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Protocol/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlumberDataTypes/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProxyServer/IncomingCovertThread.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProxyServer/IncomingCovertThread.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProxyServer/OutgoingCovertThread.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProxyServer/OutgoingCovertThread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProxyServer/OutgoingDataThread.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProxyServer/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProxyServer/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProxyServer/SocksServer.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProxyServer/TCPClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProxyServer/TCPClient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/c_samples.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProxyServer/TestServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProxyServer/TestServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,7 +42,7 @@
     <SUITE FILE_PATH="coverage/plumber$TwistedServer.coverage" NAME="TwistedServer Coverage Results" MODIFIED="1526659531418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlumberClient" />
     <SUITE FILE_PATH="coverage/plumber$example__1_.coverage" NAME="example (1) Coverage Results" MODIFIED="1524943477607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/PySecretSOCKS-master" />
     <SUITE FILE_PATH="coverage/plumber$TCPServer_socket.coverage" NAME="TCPServer_socket Coverage Results" MODIFIED="1526718981323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlumberClient" />
-    <SUITE FILE_PATH="coverage/plumber$Client__1_.coverage" NAME="Server Coverage Results" MODIFIED="1526812392551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ProxyServer" />
+    <SUITE FILE_PATH="coverage/plumber$Client__1_.coverage" NAME="Server Coverage Results" MODIFIED="1526814588243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ProxyServer" />
     <SUITE FILE_PATH="coverage/plumber$regeorge.coverage" NAME="regeorge Coverage Results" MODIFIED="1524931061009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlumberClient" />
     <SUITE FILE_PATH="coverage/plumber$Server.coverage" NAME="Server Coverage Results" MODIFIED="1525631697111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PlumberClient/SocksServer" />
   </component>
@@ -61,11 +51,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Server.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProxyServer/Server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+            <state relative-caret-position="67">
+              <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -73,77 +63,8 @@
       <file leaf-file-name="TCPClient.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProxyServer/TCPClient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="62" column="84" selection-start-line="62" selection-start-column="84" selection-end-line="62" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="threading.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2018.1/system/remote_sources/382210488/201544331/threading.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="753" selection-start-line="753" selection-end-line="753" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlumberPacket.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Protocol/PlumberPacket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="34" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PollPacket.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Protocol/PollPacket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PlumberClient/Client.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OutgoingCovertThread.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PlumberClient/OutgoingCovertThread.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Protocol/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SocksServer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProxyServer/SocksServer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#82#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="251">
+              <caret line="61" column="19" lean-forward="true" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -151,8 +72,26 @@
       <file leaf-file-name="IncomingCovertThread.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProxyServer/IncomingCovertThread.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+            <state relative-caret-position="521">
+              <caret line="60" column="54" lean-forward="true" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IncomingPollThread.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProxyServer/IncomingPollThread.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OutgoingCovertThread.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProxyServer/OutgoingCovertThread.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -195,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Protocol/DataStructure.py" />
         <option value="$PROJECT_DIR$/Protocol/PacketDataStructure.py" />
         <option value="$PROJECT_DIR$/Protocol/PlumberProto.py" />
         <option value="$PROJECT_DIR$/Protocol/AckPacket.py" />
@@ -227,8 +165,6 @@
         <option value="$PROJECT_DIR$/ProxyServer/OutgoingDataThread.py" />
         <option value="$PROJECT_DIR$/Client/IncomingCovertThread.py" />
         <option value="$PROJECT_DIR$/ProxyServer/Forwarder.py" />
-        <option value="$PROJECT_DIR$/ProxyServer/IncomingCovertThread.py" />
-        <option value="$PROJECT_DIR$/ProxyServer/OutgoingCovertThread.py" />
         <option value="$PROJECT_DIR$/Protocol/PlumberPacket.py" />
         <option value="$PROJECT_DIR$/Protocol/PollPacket.py" />
         <option value="$PROJECT_DIR$/PlumberClient/TCPServer.py" />
@@ -240,12 +176,15 @@
         <option value="$PROJECT_DIR$/TestSocksClient.py" />
         <option value="$PROJECT_DIR$/TestSocksServer.py" />
         <option value="$PROJECT_DIR$/PlumberClient/TCPServer_socket.py" />
-        <option value="$PROJECT_DIR$/ProxyServer/Server.py" />
         <option value="$PROJECT_DIR$/SocksServer.py" />
         <option value="$PROJECT_DIR$/PlumberClient/Client.py" />
-        <option value="$PROJECT_DIR$/ProxyServer/TCPClient.py" />
         <option value="$PROJECT_DIR$/Protocol/__init__.py" />
         <option value="$PROJECT_DIR$/PlumberClient/OutgoingCovertThread.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/TCPClient.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/OutgoingCovertThread.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/Server.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/IncomingCovertThread.py" />
+        <option value="$PROJECT_DIR$/ProxyServer/IncomingPollThread.py" />
       </list>
     </option>
   </component>
@@ -282,12 +221,7 @@
             <path>
               <item name="plumber" type="b2602c69:ProjectViewProjectNode" />
               <item name="plumber" type="462c0819:PsiDirectoryNode" />
-              <item name="PlumberClient" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plumber" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plumber" type="462c0819:PsiDirectoryNode" />
-              <item name="Protocol" type="462c0819:PsiDirectoryNode" />
+              <item name="ProxyServer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -307,19 +241,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ProxyServer" />
-      <recent name="$PROJECT_DIR$/PlumberClient" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Protocol" />
-      <recent name="$PROJECT_DIR$/Client" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Client" />
       <recent name="$PROJECT_DIR$/PlumberClient/SocksServer" />
       <recent name="$PROJECT_DIR$/ProxyClient" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Protocol" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ProxyServer" />
+      <recent name="$PROJECT_DIR$/PlumberClient" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Protocol" />
+      <recent name="$PROJECT_DIR$/Client" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -482,20 +416,20 @@
       <window_info anchor="bottom" id="Run" order="4" weight="0.32605305" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32879582" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.32988048" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4974359" visible="true" weight="0.21593626" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49921995" visible="true" weight="0.21593626" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32761312" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32988048" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.50256413" side_tool="true" weight="0.21593626" />
-      <window_info active="true" anchor="bottom" x="76" y="344" width="1832" height="381" id="Debug" order="5" sideWeight="0.67640275" visible="true" weight="0.39157566" />
+      <window_info id="Favorites" order="2" sideWeight="0.50078005" side_tool="true" weight="0.21593626" />
+      <window_info anchor="bottom" x="76" y="344" width="1832" height="381" id="Debug" order="5" sideWeight="0.67640275" weight="0.62870514" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32761312" />
       <window_info anchor="right" id="Coverage" order="3" side_tool="true" />
     </layout>
   </component>
@@ -510,13 +444,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ProxyServer/TCPClient.py</url>
-          <line>49</line>
-          <option name="timeStamp" value="66" />
+          <line>67</line>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ProxyServer/TCPClient.py</url>
-          <line>71</line>
-          <option name="timeStamp" value="67" />
+          <line>50</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ProxyServer/Server.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -529,7 +468,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="68" />
+      <option name="time" value="70" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -567,13 +506,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="1653" lean-forward="true" selection-start-line="1653" selection-end-line="1653" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/PySecretSOCKS-master/example.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -631,7 +563,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/DataPacket.py">
+    <entry file="file://$PROJECT_DIR$/PlumberDataTypes/DataPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" selection-start-line="3" selection-end-line="6" />
@@ -646,7 +578,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ProxyServer/OutgoingDataThread.py" />
-    <entry file="file://$PROJECT_DIR$/Protocol/AckPacket.py">
+    <entry file="file://$PROJECT_DIR$/PlumberDataTypes/AckPacket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
@@ -720,6 +652,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#22#104#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -740,37 +675,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProxyServer/OutgoingCovertThread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-613228049/_socket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="822" column="6" selection-start-line="822" selection-start-column="6" selection-end-line="822" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlumberClient/TCPServer_socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlumberClient/TCPServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -784,20 +692,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProxyServer/SocksServer.py">
+    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/remote_sources/382210488/201544331/threading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#82#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="121">
+          <caret line="753" selection-start-line="753" selection-end-line="753" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProxyServer/Server.py">
+    <entry file="file://$PROJECT_DIR$/PlumberDataTypes/PollPacket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        <state relative-caret-position="108">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -808,42 +713,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/PlumberPacket.py">
+    <entry file="file://$PROJECT_DIR$/PlumberClient/OutgoingCovertThread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="34" />
+        <state relative-caret-position="589">
+          <caret line="83" column="52" selection-start-line="83" selection-start-column="52" selection-end-line="83" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/remote_sources/382210488/201544331/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="753" selection-start-line="753" selection-end-line="753" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProxyServer/TCPClient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="62" column="84" selection-start-line="62" selection-start-column="84" selection-end-line="62" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProxyServer/IncomingCovertThread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/PollPacket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Protocol/__init__.py">
+    <entry file="file://$PROJECT_DIR$/PlumberDataTypes/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
@@ -853,10 +730,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlumberClient/OutgoingCovertThread.py">
+    <entry file="file://$PROJECT_DIR$/PlumberClient/TCPServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+        <state relative-caret-position="327">
+          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProxyServer/SocksServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlumberClient/TCPServer_socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProxyServer/TCPClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="61" column="19" lean-forward="true" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlumberDataTypes/PlumberPacket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProxyServer/IncomingPollThread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="36" column="16" lean-forward="true" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProxyServer/IncomingCovertThread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="60" column="54" lean-forward="true" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProxyServer/OutgoingCovertThread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProxyServer/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
         </state>
       </provider>
     </entry>
