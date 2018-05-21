@@ -28,8 +28,9 @@ def main():
     clients_dict = ClientsDict()
     poll_queue = Queue.Queue(BUF_SIZE)
 
-    p = subprocess.Popen(['/usr/bin/python3', '/root/SocksServer.py'])
-    print "Starting soscks Sever : " + str(p.pid)
+    # p = subprocess.Popen(['/usr/bin/python', '/root/socks5.py', 'start', '--port=9011', '--auth=username:password',
+    #                       '--log=true'])
+    # print "Starting soscks Sever : " + str(p.pid)
 
     p = IncomingCovertDataThread(name='icmp interpreter', stop_event=_stop_event,
                                  incoming_queue=in_queue, poll_queue=poll_queue,

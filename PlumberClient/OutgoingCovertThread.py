@@ -56,7 +56,7 @@ class OutgoingCovertThread(threading.Thread):
 
     def run(self):
         poll_thread = threading.Thread(target=self.send_poll_requests, args=())
-        poll_thread.start()
+        #poll_thread.start()
         while not self.stop_event.is_set():
             if not self.out_queue.empty():
                 try:
@@ -81,7 +81,7 @@ class OutgoingCovertThread(threading.Thread):
                     self.logger.warning("{0}".format(ex.message))
                     traceback.print_exc()
                     continue
-        poll_thread.join()
+        #poll_thread.join()
 
     def send_poll_requests(self):
         intervals = 5

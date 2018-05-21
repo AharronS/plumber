@@ -47,7 +47,8 @@ class TCPClient(threading.Thread):
             if not in_queue.empty():
                 try:
                     tcp_data = in_queue.get()
-                    self.logger.debug("got data plum packet to send over socks:\n{}".format(tcp_data))
+                    self.logger.debug("got data plum packet to send over socks:\n{}".format(":".join("{:02x}".format(
+                        ord(c)) for c in tcp_data)))
                     socks_socket.sendall(bytes(tcp_data[Raw]))
                     # spawn new thread for receive data
                     get_data_thread = threading.Thread(target=self.get_data,
