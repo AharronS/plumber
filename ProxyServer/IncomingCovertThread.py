@@ -2,7 +2,7 @@ import sys
 sys.path.append('../')
 from scapy.all import *
 from PlumberDataTypes import *
-from scapy.layers.inet import IP, ICMP, TCP
+from scapy.layers.inet import IP, ICMP
 import threading
 import logging
 
@@ -27,7 +27,8 @@ def stop_sniff(pkt):
 
 
 class IncomingCovertDataThread(threading.Thread):
-    def __init__(self, incoming_queue, poll_queue, packet_filter, stop_event, protocol=ICMP, magic=12345,
+    def __init__(self, incoming_queue, poll_queue, packet_filter, stop_event, clients_dict,
+                 out_dict, protocol=ICMP, magic=12345,
                  target=None, name=None):
         super(IncomingCovertDataThread, self).__init__()
         self.target = target
@@ -37,9 +38,11 @@ class IncomingCovertDataThread(threading.Thread):
         self.counter = 0
         self.magic = magic
         self.in_queue = incoming_queue
+        self.out_dict = out_dict
         self.poll_queue = poll_queue
         self.logger = logging.getLogger("incomming")
         self.stop_event = stop_event
+        self.clients_dict = clients_dict
 
     def run(self):
         print "Starting " + self.name
@@ -51,15 +54,19 @@ class IncomingCovertDataThread(threading.Thread):
     def dissect_packet(self):
         def custom_action(pkt):
             if self.protocol in pkt:
-                self.logger.debug("incoming packet:\n{}".format(pkt.show2(dump=True)))
+                self.logger.debug("incoming packet:\n{}".format(pkt.summary()))
                 if Raw in pkt:
                     try:
                         plum_pkt = get_plumberpacket_packet(self.magic, pkt)
                         self.logger.info("incoming PlumberPacket!")
                         if plum_pkt.message_type == 2:
+                            self.clients_dict.incoming_packet(plum_pkt)
                             self.in_queue.put(plum_pkt)
                         elif plum_pkt.message_type == 5:
-                            self.poll_queue.put(plum_pkt)
+                            if self.out_dict.is_client_exist(plum_pkt.src_ip):
+                                self.clients_dict.incoming_packet(plum_pkt)
+                            self.logger.debug("incoming poll request from {}".format(
+                                plum_pkt.src_ip))
                     except Exception as ex:
                         self.logger.exception("unknown packet")
                         return custom_action

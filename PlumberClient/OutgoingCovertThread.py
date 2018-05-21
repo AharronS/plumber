@@ -7,12 +7,13 @@ from PlumberDataTypes.DataPacket import DataPacket
 import threading
 import logging
 import traceback
+import time
 from random import randint
 
 
 def generate_icmp_wrapper(plumber_pkt, dst_ip):
     ip_layer = IP(dst=dst_ip)
-    icmp_layer = ICMP(type="echo-request", id=randint(1, 65530))
+    icmp_layer = ICMP(type="echo-request", id=1337)
     return ip_layer / icmp_layer / plumber_pkt
 
 
@@ -22,11 +23,13 @@ def plumberpacket_wrapper(magic, tcp_data):
     plumber_pkt.magic = magic
     return plumber_pkt / tcp_data
 
+
 def generate_poll_packet(magic, dst_ip):
     plumber_pkt = PollPacket()
     plumber_pkt.message_target = "server"
     plumber_pkt.magic = magic
     return generate_icmp_wrapper(plumber_pkt, dst_ip)
+
 
 def get_plumberpacket_packet(magic, pkt):
     if IP in pkt and ICMP in pkt and Raw in pkt:
@@ -52,6 +55,8 @@ class OutgoingCovertThread(threading.Thread):
         self.stop_event = stop_event
 
     def run(self):
+        poll_thread = threading.Thread(target=self.send_poll_requests, args=())
+        poll_thread.start()
         while not self.stop_event.is_set():
             if not self.out_queue.empty():
                 try:
@@ -61,7 +66,7 @@ class OutgoingCovertThread(threading.Thread):
                     icmp_pkt = generate_icmp_wrapper(plum_pkt, self.target)
                     self.logger.debug("send icmp: {}".format(icmp_pkt.summary()))
                     # TODO: Add loop for sending packet
-                    covert_res = sr1(icmp_pkt, timeout=100)
+                    covert_res = sr1(icmp_pkt, timeout=10)
                     if covert_res:
                         self.logger.debug("response icmp: {}".format(covert_res.show2(dump=True)))
                         try:
@@ -76,12 +81,14 @@ class OutgoingCovertThread(threading.Thread):
                     self.logger.warning("{0}".format(ex.message))
                     traceback.print_exc()
                     continue
+        poll_thread.join()
 
-             # generate poll requests
-            else:
-                # TODO: Arrange the poll process
-                poll_pkt = generate_poll_packet(self.magic, self.target)
-                covert_res = sr1(poll_pkt, timeout=5)
+    def send_poll_requests(self):
+        intervals = 5
+        poll_pkt = generate_poll_packet(self.magic, self.target)
+        while not self.stop_event.is_set():
+            if self.out_queue.empty():
+                covert_res = sr1(poll_pkt, timeout=10)
                 if covert_res:
                     if covert_res:
                         self.logger.debug("response icmp: {}".format(covert_res.show2(dump=True)))
@@ -89,8 +96,11 @@ class OutgoingCovertThread(threading.Thread):
                             plum_pkt = get_plumberpacket_packet(self.magic, covert_res)
                             if plum_pkt is not None:
                                 self.in_queue.put(plum_pkt)
+                                intervals = 0
                                 self.counter += 1
                         except Exception:
                             self.logger.exception("Get poll packet failed")
                             continue
+            time.sleep(intervals)
+            intervals = 5
         return

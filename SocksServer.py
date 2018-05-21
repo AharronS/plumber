@@ -15,45 +15,46 @@ class ThreadingTCPServer(ThreadingMixIn, TCPServer):
 class SocksProxy(StreamRequestHandler):
     username = 'username'
     password = 'password'
-
     def handle(self):
         logging.info('Accepting connection from %s:%s' % self.client_address)
+        try:
+            # greeting header
+            # read and unpack 2 bytes from a client
+            header = self.connection.recv(2)
+            version, nmethods = struct.unpack("!BB", header)
 
-        # greeting header
-        # read and unpack 2 bytes from a client
-        header = self.connection.recv(2)
-        version, nmethods = struct.unpack("!BB", header)
+            # socks 5
+            assert version == SOCKS_VERSION
+            assert nmethods > 0
 
-        # socks 5
-        assert version == SOCKS_VERSION
-        assert nmethods > 0
+            # get available methods
+            methods = self.get_available_methods(nmethods)
 
-        # get available methods
-        methods = self.get_available_methods(nmethods)
+            # accept only USERNAME/PASSWORD auth
+            if 2 not in set(methods):
+                # close connection
+                self.server.close_request(self.request)
+                return
 
-        # accept only USERNAME/PASSWORD auth
-        if 2 not in set(methods):
-            # close connection
-            self.server.close_request(self.request)
+            # send welcome message
+            self.connection.sendall(struct.pack("!BB", SOCKS_VERSION, 2))
+
+            if not self.verify_credentials():
+                return
+
+            # request
+            version, cmd, _, address_type = struct.unpack("!BBBB", self.connection.recv(4))
+            assert version == SOCKS_VERSION
+
+            if address_type == 1:  # IPv4
+                address = socket.inet_ntoa(self.connection.recv(4))
+            elif address_type == 3:  # Domain name
+                domain_length = ord(self.connection.recv(1)[0])
+                address = self.connection.recv(domain_length)
+
+            port = struct.unpack('!H', self.connection.recv(2))[0]
+        except:
             return
-
-        # send welcome message
-        self.connection.sendall(struct.pack("!BB", SOCKS_VERSION, 2))
-
-        if not self.verify_credentials():
-            return
-
-        # request
-        version, cmd, _, address_type = struct.unpack("!BBBB", self.connection.recv(4))
-        assert version == SOCKS_VERSION
-
-        if address_type == 1:  # IPv4
-            address = socket.inet_ntoa(self.connection.recv(4))
-        elif address_type == 3:  # Domain name
-            domain_length = ord(self.connection.recv(1)[0])
-            address = self.connection.recv(domain_length)
-
-        port = struct.unpack('!H', self.connection.recv(2))[0]
 
         # reply
         try:
@@ -117,7 +118,6 @@ class SocksProxy(StreamRequestHandler):
     def exchange_loop(self, client, remote):
 
         while True:
-
             # wait until client or remote is available for read
             r, w, e = select.select([client, remote], [], [])
 

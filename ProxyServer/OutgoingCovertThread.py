@@ -4,8 +4,7 @@ from scapy.all import *
 from scapy.layers.inet import IP, TCP, ICMP
 import threading
 import logging
-import traceback
-
+from OutgoingDict import ClientNotFoundInDict
 
 def generate_icmp_wrapper(plumber_pkt):
     ip_layer = IP(dst=plumber_pkt.src_ip)
@@ -16,23 +15,29 @@ def generate_icmp_wrapper(plumber_pkt):
 
 
 class OutgoingCovertThread(threading.Thread):
-    def __init__(self, incoming_queue, stop_event, protocol=TCP, target=None, name=None,
+    def __init__(self, out_dict, clients_dict, stop_event, protocol=TCP, target=None, name=None,
                  magic=12345):
         super(OutgoingCovertThread, self).__init__()
         self.target = target
         self.name = name
         self.counter = 0
         self.protocol = protocol
-        self.in_queue = incoming_queue
+        self.out_dict = out_dict
+        self.clients_dict = clients_dict
         self.logger = logging.getLogger("Covert response")
         self.magic = magic
         self.stop_event = stop_event
 
     def run(self):
         while not self.stop_event.is_set():
-            if not self.in_queue.empty():
+            if not self.out_dict.is_out_dict_empty():
                 try:
-                    res_pkt = self.in_queue.get()
+                    try:
+                        client_wait_key = self.clients_dict.get_waiting_client(self.out_dict.get_all_outgoing_keys())
+                    except Exception as ex:
+                        #TODO: fix it
+                        continue
+                    res_pkt = self.out_dict.get_plumber_pkt_from_dict_by_key(client_wait_key)
                     logging.info("got packet, {}".format(res_pkt.summary()))
                     if res_pkt:
                         out_pkt = generate_icmp_wrapper(res_pkt)
@@ -43,10 +48,9 @@ class OutgoingCovertThread(threading.Thread):
                         out_pkt.show2(dump=True)
                     ))
                     send(out_pkt)
+                    self.clients_dict.outgoing_packet(out_pkt)
                     self.counter += 1
-                    time.sleep(0.001)
-                except Exception as ex:
-                    self.logger.warning("{0}".format(ex.message))
-                    traceback.print_exc()
+                except Exception:
+                    self.logger.exception("get data from out_dict faileds")
                     continue
         return
