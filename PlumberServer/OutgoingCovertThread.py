@@ -36,7 +36,6 @@ class OutgoingCovertThread(threading.Thread):
                     try:
                         client_wait_key = self.clients_dict.get_waiting_client(self.out_dict.get_all_outgoing_keys())
                     except Exception as ex:
-                        #TODO: fix it
                         continue
                     res_pkt = self.out_dict.get_plumber_pkt_from_dict_by_key(client_wait_key)
                     logging.info("got packet, {}".format(res_pkt.summary()))

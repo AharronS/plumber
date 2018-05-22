@@ -6,6 +6,7 @@ import logging
 from OutgoingCovertThread import OutgoingCovertThread
 import threading
 
+
 def plumberpacket_data_res(tcp_data, old_plum_pkt):
     plumber_pkt = DataPacket()
     plumber_pkt.message_target = "client"
@@ -29,7 +30,6 @@ class TCPClient(threading.Thread):
         self.name = "tcp client"
 
     def run(self):
-        # TODO: add error handling
         remote_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         remote_socket.connect((self.socks_host, self.socks_port))
         remote_socket.settimeout(5)
@@ -43,17 +43,12 @@ class TCPClient(threading.Thread):
 
     def send_to_server(self, in_queue, socks_socket):
         while True:
-            # TODO: add conn alive func
             if not in_queue.empty():
                 try:
                     tcp_data = in_queue.get()
                     self.logger.debug("got data plum packet to send over socks:\n{}".format(":".join("{:02x}".format(
                         ord(c)) for c in bytes(tcp_data[Raw]))))
                     socks_socket.sendall(bytes(tcp_data[Raw]))
-                    # # spawn new thread for receive data
-                    # get_data_thread = threading.Thread(target=self.get_data,
-                    #                                    args=(tcp_data, socks_socket,))
-                    # get_data_thread.start()
                     while True:
                         try:
                             tcp_res = socks_socket.recv(1024)

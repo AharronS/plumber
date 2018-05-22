@@ -4,6 +4,14 @@ import socket
 import threading
 
 
+"""
+Incoming Tcp Data thread - 
+The role of the thread is server as TCP Server,
+when the server accept connection, get data from socket and put the data on the out_queue
+when the covert channel get data from proxy server return the data to the socks client
+"""
+
+
 class IncomingTCPSocketHandler(threading.Thread):
     def __init__(self, in_queue, out_queue, stop_event, host, port):
         super(IncomingTCPSocketHandler, self).__init__()
@@ -26,12 +34,14 @@ class IncomingTCPSocketHandler(threading.Thread):
 
     def run(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # reuse socket for multiple connections
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.bind((self.host, self.port))
         s.listen(5)
         while not self.stop_event.is_set():
             self.request, addr = s.accept()
             self.conn_alive = True
+            # handle tcp connection
             self.handle(addr)
             self.request.close()
             self.logger.debug("server close connection")
