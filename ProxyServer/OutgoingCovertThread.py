@@ -6,6 +6,7 @@ import threading
 import logging
 from OutgoingDict import ClientNotFoundInDict
 
+
 def generate_icmp_wrapper(plumber_pkt):
     ip_layer = IP(dst=plumber_pkt.src_ip)
     icmp_layer = ICMP(type="echo-reply")
@@ -15,16 +16,16 @@ def generate_icmp_wrapper(plumber_pkt):
 
 
 class OutgoingCovertThread(threading.Thread):
-    def __init__(self, out_dict, clients_dict, stop_event, protocol=TCP, target=None, name=None,
+    def __init__(self, out_dict, clients_dict, stop_event, protocol=TCP, target=None,
                  magic=12345):
         super(OutgoingCovertThread, self).__init__()
         self.target = target
-        self.name = name
+        self.name = "outgoing ICMP"
         self.counter = 0
         self.protocol = protocol
         self.out_dict = out_dict
         self.clients_dict = clients_dict
-        self.logger = logging.getLogger("Covert response")
+        self.logger = logging.getLogger(self.name)
         self.magic = magic
         self.stop_event = stop_event
 

@@ -29,10 +29,10 @@ def stop_sniff(pkt):
 class IncomingCovertDataThread(threading.Thread):
     def __init__(self, incoming_queue, poll_queue, packet_filter, stop_event, clients_dict,
                  out_dict, protocol=ICMP, magic=12345,
-                 target=None, name=None):
+                 target=None):
         super(IncomingCovertDataThread, self).__init__()
         self.target = target
-        self.name = name
+        self.name = "incoming ICMP"
         self.packet_filter_func = packet_filter
         self.protocol = protocol
         self.counter = 0
@@ -40,15 +40,15 @@ class IncomingCovertDataThread(threading.Thread):
         self.in_queue = incoming_queue
         self.out_dict = out_dict
         self.poll_queue = poll_queue
-        self.logger = logging.getLogger("incomming")
+        self.logger = logging.getLogger(self.name)
         self.stop_event = stop_event
         self.clients_dict = clients_dict
 
     def run(self):
-        print "Starting " + self.name
+        self.logger.info("Starting " + self.name)
         sniff(lfilter=self.packet_filter_func, prn=self.dissect_packet(), stop_filter=stop_sniff)
         self.stop_event.set()
-        print "Exiting " + self.name
+        self.logger.info("Exiting " + self.name)
         return
 
     def dissect_packet(self):

@@ -1,14 +1,12 @@
 import sys
 sys.path.append('../')
 from scapy.all import *
-from scapy.layers.inet import IP, ICMP, TCP
+from scapy.layers.inet import IP, ICMP
 from PlumberDataTypes import *
 from PlumberDataTypes.DataPacket import DataPacket
 import threading
 import logging
 import traceback
-import time
-from random import randint
 
 
 def generate_icmp_wrapper(plumber_pkt, dst_ip):
@@ -54,9 +52,14 @@ class OutgoingCovertThread(threading.Thread):
         self.logger = logging.getLogger("Outgoing Channel")
         self.stop_event = stop_event
 
+    def stop(self):
+        self.stop_event.set()
+
+    def stopped(self):
+        return self.stop_event.is_set()
+
     def run(self):
-        poll_thread = threading.Thread(target=self.send_poll_requests, args=())
-        #poll_thread.start()
+        poll_pkt = generate_poll_packet(self.magic, self.target)
         while not self.stop_event.is_set():
             if not self.out_queue.empty():
                 try:
@@ -80,27 +83,16 @@ class OutgoingCovertThread(threading.Thread):
                 except Exception as ex:
                     self.logger.warning("{0}".format(ex.message))
                     traceback.print_exc()
-                    continue
-        #poll_thread.join()
-
-    def send_poll_requests(self):
-        intervals = 5
-        poll_pkt = generate_poll_packet(self.magic, self.target)
-        while not self.stop_event.is_set():
-            if self.out_queue.empty():
-                covert_res = sr1(poll_pkt, timeout=10)
-                if covert_res:
+            else:
+                if not self.stop_event.is_set():
+                    covert_res = sr1(poll_pkt, timeout=10)
                     if covert_res:
                         self.logger.debug("response icmp: {}".format(covert_res.show2(dump=True)))
                         try:
                             plum_pkt = get_plumberpacket_packet(self.magic, covert_res)
                             if plum_pkt is not None:
                                 self.in_queue.put(plum_pkt)
-                                intervals = 0
                                 self.counter += 1
                         except Exception:
                             self.logger.exception("Get poll packet failed")
                             continue
-            time.sleep(intervals)
-            intervals = 5
-        return

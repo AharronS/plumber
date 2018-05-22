@@ -17,8 +17,7 @@ def plumberpacket_data_res(tcp_data, old_plum_pkt):
 
 
 class TCPClient(threading.Thread):
-    def __init__(self, socks_host, socks_port, in_queue, out_dict, stop_event,
-                 magic=12345):
+    def __init__(self, socks_host, socks_port, in_queue, out_dict, stop_event, magic=12345):
         super(TCPClient, self).__init__()
         self.socks_host = socks_host
         self.socks_port = socks_port
@@ -27,6 +26,7 @@ class TCPClient(threading.Thread):
         self.logger = logging.getLogger("tcp client")
         self.stop_event = stop_event
         self.magic = magic
+        self.name = "tcp client"
 
     def run(self):
         # TODO: add error handling
@@ -48,12 +48,23 @@ class TCPClient(threading.Thread):
                 try:
                     tcp_data = in_queue.get()
                     self.logger.debug("got data plum packet to send over socks:\n{}".format(":".join("{:02x}".format(
-                        ord(c)) for c in tcp_data)))
+                        ord(c)) for c in bytes(tcp_data[Raw]))))
                     socks_socket.sendall(bytes(tcp_data[Raw]))
-                    # spawn new thread for receive data
-                    get_data_thread = threading.Thread(target=self.get_data,
-                                                       args=(tcp_data, socks_socket,))
-                    get_data_thread.start()
+                    # # spawn new thread for receive data
+                    # get_data_thread = threading.Thread(target=self.get_data,
+                    #                                    args=(tcp_data, socks_socket,))
+                    # get_data_thread.start()
+                    while True:
+                        try:
+                            tcp_res = socks_socket.recv(1024)
+                            if tcp_res is ' ' or not tcp_res:
+                                break
+                            plum_data_response = plumberpacket_data_res(tcp_res, tcp_data)
+                            self.out_dict.insert_plumber_pkt_to_list(plum_data_response)
+                        except socket.timeout:
+                            break
+                        except:
+                            break
 
                 except Exception as ex:
                     logging.exception("sending to socks server failed")
