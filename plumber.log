@@ -26,3 +26,5 @@ Traceback (most recent call last):
     return getattr(self._sock,name)(*args)
 error: [Errno 32] Broken pipe
 2018-05-22 18:26:39,830 - root - INFO - starting client..
+2018-05-22 19:39:08,188 - root - INFO - starting client..
+2018-05-22 19:42:10,351 - root - INFO - starting client..

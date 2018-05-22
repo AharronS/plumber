@@ -18,10 +18,23 @@ pid_file = user_home + '/.pysocks.pid'
 BUF_SIZE = 1000
 
 
+"""
+Catching requests of cntrl+c
+"""
+
+
 def signal_handler(signal_hand, frame):
     SocksServer.stop(pid_file)
     os.kill(os.getgid(), signal.SIGTERM)
     sys.exit(0)
+
+
+"""
+Runs 3 threads
+IncomingCovertDataThread
+OutgoingCovertThread
+SockServerThread(fork new process)
+"""
 
 
 def start_server(listen_host, listen_port, users, passwords):

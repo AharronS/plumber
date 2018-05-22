@@ -2,6 +2,7 @@ import logging
 from scapy.layers.inet import Raw
 import socket
 import threading
+import os, signal, sys
 
 
 """
@@ -48,7 +49,9 @@ class IncomingTCPSocketHandler(threading.Thread):
 
     def handle(self, addr):
         self.logger.debug("got connection from {}".format(addr))
+        # thread for outgoing data from the socket
         get_data_thread = threading.Thread(target=self.get_data)
+        # thread for incoming data from the queue
         write_data_thread = threading.Thread(target=self.write_data)
         get_data_thread.daemon = True
         write_data_thread.daemon = True
@@ -61,8 +64,10 @@ class IncomingTCPSocketHandler(threading.Thread):
         try:
             while not self.stop_event.is_set() and self.conn_alive:
                 try:
+                    # get data from socket
                     data = self.request.recv(1024)
                     if not data:
+                        # connection end, exit and wait for next connections
                         self.conn_alive = False
                         break
                     self.out_queue.put(data)
@@ -77,11 +82,17 @@ class IncomingTCPSocketHandler(threading.Thread):
             while not self.stop_event.is_set() and self.conn_alive:
                 if not self.in_queue.empty():
                     try:
+                        # get data from queue
                         tcp_pkt = self.in_queue.get()
                         data = bytes(tcp_pkt[Raw])
                         if self.conn_alive:
+                            # send data to client
                             self.request.sendall(data)
                     except Exception as ex:
                         logging.exception("read data from in_queue failed")
         except:
             self.logger.exception("write data exception")
+
+def signal_handler(signal_hand, frame):
+    os.kill(os.getgid(), signal.SIGTERM)
+    sys.exit(0)

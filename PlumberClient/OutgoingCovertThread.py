@@ -7,7 +7,7 @@ from PlumberDataTypes.DataPacket import DataPacket
 import threading
 import logging
 import traceback
-
+import signal
 
 """
 generate icmp wrapper for plumber packets
@@ -78,6 +78,7 @@ class OutgoingCovertThread(threading.Thread):
         self.in_queue = in_queue
         self.logger = logging.getLogger("Outgoing Channel")
         self.stop_event = stop_event
+        signal.signal(signal.SIGINT, signal_handler)
 
     def stop(self):
         self.stop_event.set()
@@ -130,3 +131,9 @@ class OutgoingCovertThread(threading.Thread):
                         except Exception:
                             self.logger.exception("Get poll packet failed")
                             continue
+
+
+def signal_handler(signal_hand, frame):
+    os.kill(os.getgid(), signal.SIGTERM)
+    sys.exit(0)
+

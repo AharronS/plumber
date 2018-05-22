@@ -11,6 +11,8 @@ import signal
 """
 Catching requests of cntrl+c
 """
+
+
 def signal_handler(signal_hand, frame):
     os.kill(os.getgid(), signal.SIGTERM)
     sys.exit(0)
@@ -21,6 +23,8 @@ Runs 2 threads
 IncomingTCPSocketHandler
 OutgoingCovertThread
 """
+
+
 def start_client(listen_host, listen_port, proxy_addr, buff_size=1000):
     try:
         signal.signal(signal.SIGINT, signal_handler)

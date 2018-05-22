@@ -5,12 +5,19 @@ from PlumberDataTypes import *
 from scapy.layers.inet import IP, ICMP
 import threading
 import logging
+import os, signal
+
+"""
+extract Plumber Packet data from ICMP packet
+"""
 
 
 def get_plumberpacket_packet(magic, pkt):
     if IP in pkt and ICMP in pkt and Raw in pkt:
         plum_packet = PlumberPacket(pkt[ICMP][Raw].load)
         if plum_packet.magic == magic:
+            # assign the source ip to the plumber packet for tracking
+            # in next stages of process
             plum_packet.src_ip = pkt[IP].src
             plum_packet.id, plum_packet.seq = pkt[ICMP].id, pkt[ICMP].seq
             return plum_packet
@@ -24,6 +31,12 @@ def stop_sniff(pkt):
         return True
     else:
         return False
+
+
+"""
+IncomingCovertDataThread - 
+The role of this thread is to manage all the covert data from clients. 
+"""
 
 
 class IncomingCovertDataThread(threading.Thread):
@@ -46,6 +59,7 @@ class IncomingCovertDataThread(threading.Thread):
 
     def run(self):
         self.logger.info("Starting " + self.name)
+        # sniff icmp packets and dissect the packets
         sniff(lfilter=self.packet_filter_func, prn=self.dissect_packet(), stop_filter=stop_sniff)
         self.stop_event.set()
         self.logger.info("Exiting " + self.name)
@@ -57,11 +71,16 @@ class IncomingCovertDataThread(threading.Thread):
                 self.logger.debug("incoming packet:\n{}".format(pkt.summary()))
                 if Raw in pkt:
                     try:
+                        # try to extract data from packets
                         plum_pkt = get_plumberpacket_packet(self.magic, pkt)
                         self.logger.info("incoming PlumberPacket!")
+                        # if it data packet
                         if plum_pkt.message_type == 2:
+                            # increment the counter ot this client
                             self.clients_dict.incoming_packet(plum_pkt)
+                            # put packet on in_queue
                             self.in_queue.put(plum_pkt)
+                        # if it poll packets
                         elif plum_pkt.message_type == 5:
                             if self.out_dict.is_client_exist(plum_pkt.src_ip):
                                 self.clients_dict.incoming_packet(plum_pkt)
