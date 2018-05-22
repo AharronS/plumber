@@ -1,6 +1,12 @@
-from ..SocksServer import *
 from socket import socket, AF_INET, SOCK_STREAM
 import logging
+from ServerReply import ReplyType
+from SocketPipe import SocketPipe
+
+
+def build_command_response(reply):
+    start = b'\x05%s\x00\x01\x00\x00\x00\x00\x00\x00'
+    return start % reply.get_byte_string()
 
 
 class CommandExecutor(object):

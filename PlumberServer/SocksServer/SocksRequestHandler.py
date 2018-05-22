@@ -1,13 +1,13 @@
-from SocketServer import BaseServer, ThreadingTCPServer, StreamRequestHandler
-from socket import socket, AF_INET, SOCK_STREAM
-import logging
-import signal
 import struct
-import sys
-import thread
-import os
-import platform
-from ..SocksServer import *
+from SocketServer import BaseServer, ThreadingTCPServer, StreamRequestHandler
+from AddressType import AddressType
+from Session import Session
+from SocksMethod import SocksMethod
+import logging
+from SocksServerTools import close_session, host_from_ip, port_from_byte, build_command_response, byte_to_int
+from CommandsExec import CommandExecutor
+from ServerReply import ReplyType
+from SocksCommand import SocksCommand
 
 
 class Socks5RequestHandler(StreamRequestHandler):

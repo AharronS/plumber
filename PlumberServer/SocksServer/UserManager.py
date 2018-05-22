@@ -1,6 +1,3 @@
-from ..SocksServer import *
-
-
 class User(object):
     def __init__(self, username, password):
         self.__username = username

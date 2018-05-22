@@ -16,7 +16,6 @@ setup(
     keywords="",
     url="",
     install_requires=['scapy', 'colorama'],
-    packages=['plumber'],
     long_description=read('README'),
     classifiers=[],
 )

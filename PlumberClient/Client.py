@@ -6,13 +6,17 @@ from scapy.layers.inet import *
 from OutgoingCovertThread import OutgoingCovertThread
 import threading
 from TCPServerForwarder import IncomingTCPSocketHandler
+import signal
 
-#TODO - remove this afterwards
-logging.basicConfig(level=logging.DEBUG, format='(%(threadName)-9s) %(message)s', )
+
+def signal_handler(signal_hand, frame):
+    os.kill(os.getgid(), signal.SIGTERM)
+    sys.exit(0)
 
 
 def start_client(listen_host, listen_port, proxy_addr, buff_size=1000):
     try:
+        signal.signal(signal.SIGINT, signal_handler)
         stop_event = threading.Event()
         in_queue = Queue.Queue(buff_size)
         out_queue = Queue.Queue(buff_size)

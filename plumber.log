@@ -1,1 +1,27 @@
 2018-05-22 09:23:48,430 - root - INFO - hello world
+2018-05-22 12:14:02,396 - root - INFO - starting client..
+2018-05-22 12:19:14,543 - root - INFO - starting client..
+2018-05-22 12:50:35,811 - root - INFO - starting client..
+2018-05-22 12:55:40,558 - root - INFO - starting client..
+2018-05-22 13:00:23,729 - root - INFO - starting client..
+2018-05-22 13:11:58,541 - root - INFO - starting client..
+2018-05-22 13:13:12,591 - TCP Server Channel - ERROR - data receive failed
+Traceback (most recent call last):
+  File "/home/zen/git/plumber/PlumberClient/TCPServerForwarder.py", line 54, in get_data
+    data = self.request.recv(1024)
+error: [Errno 104] Connection reset by peer
+2018-05-22 13:14:31,065 - root - INFO - starting client..
+2018-05-22 13:18:56,064 - root - INFO - starting client..
+2018-05-22 13:26:07,009 - root - INFO - starting client..
+2018-05-22 13:27:13,337 - TCP Server Channel - ERROR - data receive failed
+Traceback (most recent call last):
+  File "/home/zen/git/plumber/PlumberClient/TCPServerForwarder.py", line 54, in get_data
+    data = self.request.recv(1024)
+error: [Errno 104] Connection reset by peer
+2018-05-22 13:27:13,337 - root - ERROR - read data from in_queue failed
+Traceback (most recent call last):
+  File "/home/zen/git/plumber/PlumberClient/TCPServerForwarder.py", line 73, in write_data
+    self.request.sendall(data)
+  File "/home/zen/anaconda2/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 32] Broken pipe
